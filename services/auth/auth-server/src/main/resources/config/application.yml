@@ -1,3 +1,36 @@
+server:
+  port: 8761
 spring:
+  profiles:
+    active: prod
   application:
     name: auth-server
+  datasource:
+    #数据库连接属性
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://172.16.10.210:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2b8&allowMultiQueries=true
+    username: numysql_core
+    password: numysql_core
+    tomcat:
+      #验证数据库连接的有效性
+      validation-query: SELECT 1
+      #连接池的最大数据库连接数, 设为0表示无限制
+      max-active: 100
+      #最大等待时间, 设为 -1 表示无限制
+      max-wait: 1000
+      #最大\最小空闲数,
+      max-idle: 100
+      min-idle: 10
+  jpa:
+      hibernate:
+        #配置了实体类维护数据库表结构的具体行为, update 表示当实体类的属性发生变化时, 表结构跟着更新.使用 create 可以进行删库操作,慎用
+        ddl-auto: update
+      show-sql: true
+logging:
+  #指定日志配置文件路径(ps: 有一个很神奇的东西,当你的配置文件名字默认是logback-spring.xml, 并且在 resource 目录下, 这个地方可以不写, 可以自动找到)
+  config: classpath:config/logback-spring.xml
+
+
+#自定义属性
+#邮件开关
+mail.enable: 1
