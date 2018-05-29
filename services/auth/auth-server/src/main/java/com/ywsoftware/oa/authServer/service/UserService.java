@@ -17,8 +17,9 @@ public class UserService {
 
     @Transactional
     public void saveUser() throws Exception {
-        userRepository.save(new User("10", "付玉", "1", "1"));
-        throw new NullDataException();
+        userRepository.save(new User("00000000000000000000000000000", "付玉", "1", "1"));
+
+        // throw new NullDataException();
     }
 
     /**
@@ -30,7 +31,9 @@ public class UserService {
      * @param email
      * @return
      */
+    @Transactional
     public User saveUser(String id, String name, String passWord, String email) {
+        int a = 1/0;
         return userRepository.save(new User(id, name, passWord, email));
     }
 

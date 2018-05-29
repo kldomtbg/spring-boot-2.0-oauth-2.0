@@ -20,7 +20,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/saveUser")
-    public void saveUser(String name, String id, String password, String email) throws Exception {
+    public void saveUser(String id, String name, String password, String email) throws Exception {
         userService.saveUser(id, name, password, email);
     }
 

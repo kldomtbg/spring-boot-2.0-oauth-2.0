@@ -1,10 +1,11 @@
 package com.ywsoftware.oa.authServer.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Transient;
+
+import org.hibernate.validator.constraints.Length;
+
+import javax.persistence.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 
 /**
  * Created by userFly on 2018/5/25.
@@ -12,8 +13,7 @@ import javax.validation.constraints.Email;
 @Entity
 public class User {
     @Id
-    @Column(nullable = false)
-    // @Length(max = 36, min = 36)
+    @Column(nullable = false, length = 36)
     private String id;
 
     @Column(nullable = false)
@@ -26,7 +26,7 @@ public class User {
     // @Email
     private String email;
 
-    @Transient
+    // @Transient
     // 改注解可以控制字段不被持久化
     private String test;
 
