@@ -1,11 +1,7 @@
 package com.ywsoftware.oa.authServer.entity;
 
-
-import org.hibernate.validator.constraints.Length;
-
 import javax.persistence.*;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
 
 /**
  * Created by userFly on 2018/5/25.
@@ -23,11 +19,11 @@ public class User {
     private String passWord;
 
     @Column(nullable = false)
-    // @Email
+    @Email
     private String email;
 
-    // @Transient
-    // 改注解可以控制字段不被持久化
+    @Transient
+    // 该注解可以控制字段不被持久化
     private String test;
 
     public User() {

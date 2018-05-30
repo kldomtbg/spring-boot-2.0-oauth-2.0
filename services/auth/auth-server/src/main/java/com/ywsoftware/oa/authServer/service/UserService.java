@@ -15,13 +15,6 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    @Transactional
-    public void saveUser() throws Exception {
-        userRepository.save(new User("00000000000000000000000000000", "付玉", "1", "1"));
-
-        // throw new NullDataException();
-    }
-
     /**
      * 增加用户
      *
@@ -42,6 +35,7 @@ public class UserService {
      *
      * @param id
      */
+    @Transactional
     public void deleteUser(String id) {
         userRepository.deleteById(id);
     }
@@ -53,6 +47,7 @@ public class UserService {
      * @param id
      * @return
      */
+    @Transactional
     public Integer update(String name, String id) {
         return userRepository.update(name, id);
     }

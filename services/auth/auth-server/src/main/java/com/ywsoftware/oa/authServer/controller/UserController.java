@@ -14,11 +14,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/save")
-    public void saveUser() throws Exception {
-        userService.saveUser();
-    }
-
     @RequestMapping(value = "/saveUser")
     public void saveUser(String id, String name, String password, String email) throws Exception {
         userService.saveUser(id, name, password, email);

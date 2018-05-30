@@ -1,6 +1,6 @@
 package com.ywsoftware.oa.authServer;
 
-import com.ywsoftware.oa.authServer.service.LoginService;
+import com.ywsoftware.oa.authServer.service.TestMockService;
 import com.ywsoftware.oa.authServer.service.UserService;
 import org.junit.Assert;
 import org.junit.Test;
@@ -56,23 +56,21 @@ public class UserServiceTest {
     public void test() {
         String id = "1";
         // 使用 mock 模拟 LogingService 对象,
-        LoginService loginService = mock(LoginService.class);
+        TestMockService testMockService = mock(TestMockService.class);
         // 设置方法返回值
-        when(loginService.getUsr(id)).thenReturn("付玉");
-        when(loginService.getAge(id)).thenReturn(1000);
+        when(testMockService.getUsr(id)).thenReturn("付玉");
+        when(testMockService.getAge(id)).thenReturn(1000);
         // 实际调用
-        int ret = loginService.getAge("1");
-        loginService.getUsr(id);
+        int ret = testMockService.getAge("1");
+        testMockService.getUsr(id);
 
         // 比较两次的调用顺序
-        InOrder inOrder = inOrder(loginService);
-        inOrder.verify(loginService).getUsr(id);
-        inOrder.verify(loginService).getAge(id);
+        InOrder inOrder = inOrder(testMockService);
+        inOrder.verify(testMockService).getUsr(id);
+        inOrder.verify(testMockService).getAge(id);
         // 比较返回值和预期值是否一致
         anAssert.assertEquals(1000, ret);
         // verify 包含了模拟对象和期望的调用次数, 如果调用次数不一致, 会抛异常
-        verify(loginService, times(2)).getAge(eq("1"));
-
-
+        verify(testMockService, times(2)).getAge(eq("1"));
     }
 }
