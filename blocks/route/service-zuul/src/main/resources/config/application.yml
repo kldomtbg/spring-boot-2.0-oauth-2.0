@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: service-zuul
+server:
+  port: 8769
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-feign

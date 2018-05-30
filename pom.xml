@@ -19,6 +19,7 @@
         <module>blocks/registry/eureka-server</module>
         <module>blocks/registry/eureka-client</module>
         <module>services/auth/auth-server</module>
+        <module>blocks/route/service-zuul</module>
     </modules>
 
     <properties>
