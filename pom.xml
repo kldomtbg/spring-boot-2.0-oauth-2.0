@@ -17,6 +17,7 @@
 
     <modules>
         <module>blocks/registry/eureka-server</module>
+        <module>blocks/registry/eureka-client</module>
         <module>services/auth/auth-server</module>
     </modules>
 
