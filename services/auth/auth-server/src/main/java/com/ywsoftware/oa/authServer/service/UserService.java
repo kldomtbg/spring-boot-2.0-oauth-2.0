@@ -25,8 +25,7 @@ public class UserService {
      * @return
      */
     @Transactional
-    public User saveUser(String id, String name, String passWord, String email) {
-        int a = 1/0;
+    public User create(String id, String name, String passWord, String email) {
         return userRepository.save(new User(id, name, passWord, email));
     }
 
@@ -58,7 +57,7 @@ public class UserService {
      * @param name
      * @return
      */
-    public User getUser(String name) {
+    public User read(String name) {
         return userRepository.findByName(name);
     }
 

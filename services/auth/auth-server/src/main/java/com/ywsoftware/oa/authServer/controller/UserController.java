@@ -14,9 +14,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/saveUser")
-    public void saveUser(String id, String name, String password, String email) throws Exception {
-        userService.saveUser(id, name, password, email);
+    @RequestMapping(value = "/create")
+    public void create(String id, String name, String password, String email) throws Exception {
+        userService.create(id, name, password, email);
     }
 
     @RequestMapping(value = "/update")
@@ -24,9 +24,9 @@ public class UserController {
         return userService.update(name, id);
     }
 
-    @RequestMapping(value = "/getUser")
-    public User getUser(String name) {
-        return userService.getUser(name);
+    @RequestMapping(value = "/read")
+    public User read(String name) {
+        return userService.read(name);
     }
 
     @RequestMapping(value="/delete")

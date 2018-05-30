@@ -22,7 +22,6 @@ import static org.mockito.Mockito.*;
 // 测试完毕后事物回滚
 @Transactional
 // 该注释可以控制事物不被回滚
-
 @Rollback(false)
 public class UserServiceTest {
     @Autowired
@@ -32,12 +31,11 @@ public class UserServiceTest {
 
     @Test
     public void saveUser() {
-        userService.saveUser("a", "付玉", "1", "1");
+        userService.create("a", "付玉", "1", "1");
     }
 
     @Test
     public void deleteUser() {
-        // userService.deleteUser("a");
         anAssert.assertTrue("", true);
     }
 
@@ -48,7 +46,7 @@ public class UserServiceTest {
 
     @Test
     public void getUser() {
-        userService.getUser("付玉");
+        userService.read("付玉");
 
     }
 
