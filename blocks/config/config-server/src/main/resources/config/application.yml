@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: ssh://team.ywsoftware.com:22/OACollection/OA/_git/config-repo
+          search-paths: '{application}'
+server:
+  port: 8888

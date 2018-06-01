@@ -20,11 +20,12 @@
         <module>blocks/registry/eureka-client</module>
         <module>services/auth/auth-server</module>
         <module>blocks/route/service-zuul</module>
+        <module>blocks/config/config-server</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-cloud.version>Finchley.RC2</spring-cloud.version>
+        <spring-cloud.version>Finchley.RC1</spring-cloud.version>
     </properties>
 
     <dependencyManagement>
