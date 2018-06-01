@@ -1,12 +1,10 @@
 package com.ywsoftware.oa.authServer;
 
-import com.ywsoftware.oa.authServer.service.TestMockService;
-import com.ywsoftware.oa.authServer.service.UserService;
+import com.ywsoftware.oa.authServer.core.service.TestMockService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InOrder;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -14,9 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import static org.mockito.Mockito.*;
 
-/**
- * Created by userFly on 2018/5/28.
- */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 // 测试完毕后事物回滚
@@ -24,10 +19,12 @@ import static org.mockito.Mockito.*;
 // 该注释可以控制事物不被回滚
 @Rollback(false)
 public class UserServiceTest {
-    @Autowired
+    private static Assert anAssert;
+    /*@Autowired
     UserService userService;
 
-    private static Assert anAssert;
+
+
 
     @Test
     public void saveUser() {
@@ -48,7 +45,7 @@ public class UserServiceTest {
     public void getUser() {
         userService.read("付玉");
 
-    }
+    }*/
 
     @Test
     public void test() {

@@ -1,36 +1,36 @@
 package com.ywsoftware.oa.authServer.controller;
 
-import com.ywsoftware.oa.authServer.entity.User;
-import com.ywsoftware.oa.authServer.service.UserService;
+import com.ywsoftware.oa.authServer.core.entity.User;
+import com.ywsoftware.oa.authServer.core.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-/**
- * Created by userFly on 2018/5/25.
- */
 @RestController
 public class UserController {
-    @Autowired
+
     private UserService userService;
 
-    @RequestMapping(value = "/create")
-    public void create(String id, String name, String password, String email) throws Exception {
+    public UserController(UserService _userService) {
+        this.userService = _userService;
+    }
+
+    @PostMapping("/create")
+    public void create(String id, String name, String password, String email){
         userService.create(id, name, password, email);
     }
 
-    @RequestMapping(value = "/update")
-    public Integer update(String name, String id) {
-        return userService.update(name, id);
+    @PutMapping("/update")
+    public void update(String name, String id) {
+        userService.update(name, id);
     }
 
-    @RequestMapping(value = "/read")
+    @GetMapping("/read")
     public User read(String name) {
         return userService.read(name);
     }
 
-    @RequestMapping(value="/delete")
+    @DeleteMapping("/delete")
     public void delete(String id) {
-        userService.deleteUser(id);
+        userService.delete(id);
     }
 }

@@ -1,7 +1,6 @@
-package com.ywsoftware.oa.authServer.exception;
+package com.ywsoftware.oa.authServer.base.exception;
 
 /**
- * Created by userFly on 2018/5/28.
  * 自定义异常, 无权限
  */
 public class NopermissionsApplicationException extends ApplicationException {

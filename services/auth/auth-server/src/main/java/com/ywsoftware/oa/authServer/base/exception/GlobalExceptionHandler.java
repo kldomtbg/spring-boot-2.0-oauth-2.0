@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.authServer.exception;
+package com.ywsoftware.oa.authServer.base.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Created by userFly on 2018/5/28.
  * 全局异常处理
  */
 @CrossOrigin

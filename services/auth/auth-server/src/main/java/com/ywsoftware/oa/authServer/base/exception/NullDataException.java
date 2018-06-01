@@ -1,7 +1,6 @@
-package com.ywsoftware.oa.authServer.exception;
+package com.ywsoftware.oa.authServer.base.exception;
 
 /**
- * Created by userFly on 2018/5/28.
  * 查询数据为空异常
  */
 public class NullDataException extends ApplicationException{

@@ -1,7 +1,6 @@
-package com.ywsoftware.oa.authServer.exception;
+package com.ywsoftware.oa.authServer.base.exception;
 
 /**
- * Created by userFly on 2018/5/28.
  * 定义应用异常, 自定义异常继承该类
  */
 public class ApplicationException extends RuntimeException {
