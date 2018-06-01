@@ -1,36 +1,30 @@
 package com.ywsoftware.oa.authServer.controller;
 
-import com.ywsoftware.oa.authServer.core.entity.User;
-import com.ywsoftware.oa.authServer.core.service.UserService;
+
+import com.ywsoftware.oa.authServer.domain.dto.UsuarioDTO;
+import com.ywsoftware.oa.authServer.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.security.Principal;
 
 @RestController
+@RequestMapping(value = "/usuario", produces = MediaType.APPLICATION_JSON_VALUE)
 public class UserController {
 
-    private UserService userService;
+    @Autowired
+    private UserService usuarioService;
 
-    public UserController(UserService _userService) {
-        this.userService = _userService;
+    @PreAuthorize("#oauth2.hasScope('read')")
+    @GetMapping()
+    public Principal getUsuarioLogado(Principal principal) {
+        UsuarioDTO usuarioDTO = usuarioService.getUsuarioLogado();
+        //return new ResponseEntity<>(usuarioDTO, HttpStatus.OK);
+        return principal;
     }
 
-    @PostMapping("/create")
-    public void create(String id, String name, String password, String email){
-        userService.create(id, name, password, email);
-    }
-
-    @PutMapping("/update")
-    public void update(String name, String id) {
-        userService.update(name, id);
-    }
-
-    @GetMapping("/read")
-    public User read(String name) {
-        return userService.read(name);
-    }
-
-    @DeleteMapping("/delete")
-    public void delete(String id) {
-        userService.delete(id);
-    }
 }
