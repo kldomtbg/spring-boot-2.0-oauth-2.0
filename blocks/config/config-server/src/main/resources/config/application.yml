@@ -7,5 +7,35 @@ spring:
         git:
           uri: ssh://team.ywsoftware.com:22/OACollection/OA/_git/config-repo
           search-paths: '{application}'
+          ignore-local-ssh-settings: true
+          strict-host-key-checking: false
+          private-key: |
+                         -----BEGIN RSA PRIVATE KEY-----
+                         MIIEpQIBAAKCAQEAxYG2igLk3xIMkoqS1E9zO7oXNFLcAYHE/KAKpQIEgDPsyHrb
+                         Np3lhJFCsNXXCj0jEQYv9HnKIxBhyAxyL5YkBr/s5juRS2YBZ6wqExtvgay9q0RY
+                         mC3WgVXNfXGnSwQnwVYygleE46Veou2beAFq75YWOU8kQ8WIcmg6+Nx+bNzIEU5h
+                         vvoCJDkUA5ONiQp354qdI6o5q44rBbjMeO5ZRiLF8205d/icwjZSM+B5C8Iy1ws4
+                         2ZwpkFsluDbkbDPqO83p9rqIHvMYS98l+XXRmekfbX7NThc4E31XkUGnrDl2K8tC
+                         pwSfPiJesv/ALY+ljkAjlYdjChUS46O1bKFgiwIDAQABAoIBAAbTcdSZPwG6pPaX
+                         lXWC/W+OAelMB9CBhKZafaOwSymHIeLX5CWiFWGch5qG+XSgIksfVJ71apgFo+t/
+                         Cp88aChXj79xRZc+gkPr/lREuXjY2IFHzmwMAYLczUpNmEOOdDVJXluE3NHlUDz/
+                         S0U9f02ieUgnxRAWjp2tnoQlUrU+aImgOyJplXwyI0fPFW1bOWap/5iZiY0YEThq
+                         bBYqjnnSbSDAB/dLDWnNAv86psB4yqgMWTGspRJiYoRrgD+URT0269f92HJC2fld
+                         Jq3hGR4jF59yCcWHlB2eAr2ashAAFS8ztEkGpBBxO4q9IORMc8B8q9UzPXiDLeZD
+                         bPwf4hECgYEA+AWxHK7jPs6H2H9I1IAAalrqAZtyQJxQOM+ZqYuNruRAoEgL5YqT
+                         e9i7klH2sZEHndwz6dC6WdYl0FnZCyJ1fGYWKXtMYwsktEMUUSDI37hIiOI26QXB
+                         nhurxMASwOJmMKdz8tEDO2K+rXXhQ8cJhEndn06u4IR5AztwzTl5sokCgYEAy9wO
+                         qQRA0dOk2+d8bUJhyYV2Max7/xdsQCTBm8v2dpMPXM4sdu2edw2ZZue3mT0RtYyH
+                         X4ieI3merufqQy7JEuiTIBxMhvHAk0EQcxOzDGpc6eUsZvzLaa8+Jj6KmhRKt6Op
+                         T/q/JcwY/C1VO0AOi2df4YlLuAKnbhhlLL5NhXMCgYEAn+qLmALrYsOns1/ehaVC
+                         n1CfMQoZUK94yiiQ21CvueRSBwZtJUOEdIX56w4OEc+BKbehgVCj1ujM2NoVp6hA
+                         OEVaZMSrK/EzaUcXAngxDI61tgylevnLLTaKOgHeFZ/kY9qUWCuL+e5hI1auOBVN
+                         fY5i5yTEfN7tZ7gbszcr0IECgYEAl6UfpqzKRwvIE+kTzvbVZSIJdRQYvP5AgUqW
+                         Vv2XXkcw41lfDCzgdzE/jqQKGEysUr+xp+gpsrvyxaswwT8ZRh6J6xYB+1P0a9W3
+                         ldLumuq4KSlYKVgdPIWmlq5pTgqQNiDhfuRIsqYrY9OZFlUlPJ/uXAhUshIPWD9/
+                         a5Q4eG8CgYEAscWpnX6ur0pHNVcL1fXBgpHd22CtulUPvosMIwM/C0Msol8DdW91
+                         r3hILR9WRq9mqOdi144ixTgp6xeqD3pph+hqzIEEAzh1XPPRXInzskw+BkYOheG6
+                         B9HDtmtllGwk5QoSdAZdRWTP9QE6nz2Iy1K0Y7oKczyL6WIf938Kcy4=
+                         -----END RSA PRIVATE KEY-----
 server:
   port: 8888
