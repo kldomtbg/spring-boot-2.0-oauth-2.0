@@ -7,7 +7,7 @@ spring:
     name: auth-server
   datasource:
     #数据库连接属性
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://172.16.10.210:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2b8&allowMultiQueries=true
     username: numysql_core
     password: numysql_core
