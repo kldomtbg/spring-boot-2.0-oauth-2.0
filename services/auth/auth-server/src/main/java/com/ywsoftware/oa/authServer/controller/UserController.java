@@ -33,4 +33,9 @@ public class UserController {
     public void delete(String id) {
         userService.delete(id);
     }
+
+    @RequestMapping("/test")
+    public void test() {
+        userService.testRestTemplate();
+    }
 }
