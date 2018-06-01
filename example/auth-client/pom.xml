@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ywsoftware.oa.example</groupId>
-    <artifactId>resources-server</artifactId>
+    <artifactId>auth-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>resources-server</name>
+    <name>auth-client</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
