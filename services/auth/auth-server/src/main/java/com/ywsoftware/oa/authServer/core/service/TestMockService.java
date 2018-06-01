@@ -1,8 +1,5 @@
 package com.ywsoftware.oa.authServer.core.service;
 
-/**
- * Created by userFly on 2018/5/29.
- */
 public class TestMockService {
 
     public String getUsr(String id) {
