@@ -20,26 +20,4 @@ public class HelloController {
     public ResponseEntity<String> hi(@RequestParam String name) {
         return ResponseEntity.ok("hello world " + name + ". port: " + port);
     }
-
-    @Value("${config.a}")
-    String a;
-    @Value("${config.b}")
-    String b;
-    @Value("${config.c}")
-    String c;
-    @Value("${config.d}")
-    String d;
-    @Value("${config.e}")
-    String e;
-
-    @GetMapping("/env")
-    public ResponseEntity<List<String>> env() {
-        List<String> config = new ArrayList<String>();
-        config.add(a);
-        config.add(b);
-        config.add(c);
-        config.add(d);
-        config.add(e);
-        return ResponseEntity.ok(config);
-    }
 }
