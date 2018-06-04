@@ -1,8 +1,7 @@
-package com.ywsoftware.oa.authServer.controller;
+package com.ywsoftware.oa.authServer.controllers;
 
 import com.ywsoftware.oa.authServer.core.entity.User;
 import com.ywsoftware.oa.authServer.core.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
