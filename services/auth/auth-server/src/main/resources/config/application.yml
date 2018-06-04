@@ -37,3 +37,17 @@ logging:
 #邮件开关
 mail:
    enable: 1
+   
+# mybatis
+mybatis:
+     type-aliases-package: com.ywsoftware.oa.authServer.mybatis.pojo
+     mapper-locations: classpath:mapper/*.xml
+mapper:
+    mappers: com.ywsoftware.oa.authServer.mybatis.CustomMapper
+    not-empty: false
+    identity: MYSQL
+pagehelper:
+     helperDialect: mysql
+     reasonable: true
+     supportMethodsArguments: true
+     params: count=countSql

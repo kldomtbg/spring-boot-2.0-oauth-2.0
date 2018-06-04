@@ -1,7 +1,7 @@
 package com.ywsoftware.oa.authServer.service;
 
 
-import com.ywsoftware.oa.authServer.domain.Usuario;
+import com.ywsoftware.oa.authServer.domain.User;
 import com.ywsoftware.oa.authServer.domain.dto.UsuarioDTO;
 import com.ywsoftware.oa.authServer.repository.UsuarioRepository;
 import com.ywsoftware.oa.authServer.utils.ModelMapperConverter;
@@ -24,7 +24,7 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
-        Usuario usuario = usuarioRepository.findByLogin(login);
+        User usuario = usuarioRepository.findByLogin(login);
         if (usuario == null) {
             throw new UsernameNotFoundException(String.format("User %s does not exist!", login));
         }
@@ -34,7 +34,7 @@ public class UserService implements UserDetailsService {
     public UsuarioDTO getUsuarioLogado() {
         SecurityContext securityContext = SecurityContextHolder.getContext();
         Authentication authentication = securityContext.getAuthentication();
-        Usuario usuario = (Usuario) authentication.getPrincipal();
+        User usuario = (User) authentication.getPrincipal();
         return modelMapperConverter.converterStrict(usuario, UsuarioDTO.class);
     }
 

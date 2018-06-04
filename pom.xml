@@ -16,7 +16,6 @@
     </parent>
 
     <modules>
-        <module>example</module>
         <module>services/auth/auth-server</module>
     </modules>
 

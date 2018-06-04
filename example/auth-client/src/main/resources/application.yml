@@ -1,0 +1,21 @@
+server:
+  port: 8081
+  servlet:
+    session:
+      cookie:
+        name: authserver
+Spring:
+  security:
+    oauth2:
+      client:
+        clientId: clientapp #client
+        clientSecret: 123456 #security
+        accessTokenUri: http://localhost:8080/autenticacao/oauth/token #http://localhost:8000/oauth/token
+        userAuthorizationUri: http://localhost:8080/autenticacao/oauth/authorize # http://localhost:8000//oauth/authorize
+        clientAuthenticationScheme: form
+        authenticationScheme: query
+        tokenName: oauth_token
+        userInfoUri: http://localhost:8080/autenticacao/v1/usuario #http://localhost:8000/rest/hello/principal
+      resource:
+        userInfoUri: http://localhost:8080/autenticacao/v1/usuario #http://localhost:8000/rest/hello/principal
+

@@ -46,7 +46,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.headers().frameOptions().disable();
         http
-                .authorizeRequests().antMatchers("/h2/**", "/wechat/**", "/static/**", "/druid/**").permitAll()
+                .authorizeRequests().antMatchers("/h2/**", "/static/**", "/druid/**").permitAll()
                 .antMatchers("/swagger**", "/swagger-resources/**", "/webjars/**", "/v2/**").permitAll()
                 .anyRequest().authenticated()
                 .and().formLogin().permitAll()
