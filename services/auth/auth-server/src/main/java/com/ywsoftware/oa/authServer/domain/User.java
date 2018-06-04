@@ -27,9 +27,6 @@ public class User implements UserDetails, Serializable {
     @Column(name = "password", length = 60)
     private String password;
 
-    @Column(name = "nome")
-    private String nome;
-
     @Column(name = "account_non_expired")
     private Boolean accountNonExpired;
 
@@ -69,14 +66,6 @@ public class User implements UserDetails, Serializable {
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public Boolean getAccountNonExpired() {

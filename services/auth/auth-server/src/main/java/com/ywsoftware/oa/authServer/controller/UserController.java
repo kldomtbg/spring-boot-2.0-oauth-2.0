@@ -27,17 +27,17 @@ public class UserController {
     }
 
     @ApiOperation(value = "根据id,保存或者更新用户信息")
-    @PutMapping("/saveOrUpdate")
+    @PostMapping("/saveOrUpdate")
     public UserDTO save(User user) {
         return userService.save(user);
     }
-
 
     @ApiOperation(value = "删除个人信息")
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {
         userService.delete(id);
     }
+
     @Autowired
     public void setUserService(UserService userService) {
         this.userService = userService;

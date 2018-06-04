@@ -12,11 +12,37 @@
     <script type="text/javascript" src="/webjars/bootstrap/3.2.0/js/bootstrap.js"></script>
 </head>
 <body>
-<h1>主页</h1>
 <div class="container">
-    <a href="ClientList.html"> client列表</a>
-    <a href="RoleList.html"> role列表</a>
-    <a href="UserList.html"> user列表</a>
+    <a href="UserInfo.html">添加</a>
+</div>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">client列表</div>
+        <table class="table">
+            <th>用户名</th>
+            <th>clientId</th>
+            <th>权限</th>
+            <th>状态</th>
+            <th>操作</th>
+        </table>
+    </div>
 </div>
 </body>
+<script>
+    $(function () {
+        $.ajax("/user/", {
+            success: function (data) {
+                data.forEach(function (user) {
+                    var tr = $("<tr>")
+                    tr.append($("<td>" + user.userName + "</td>"))
+                        .append($("<td>" + user.clientId + "</td>"))
+                        .append($("<td>" + user.role + "</td>"))
+                        .append($("<td>" + user.enabled + "</td>"))
+                        .append($("<td><a href='UserInfo.html?id=" + user.id + "'>修改</a></td>"))
+                    $(".table").append(tr);
+                })
+            }
+        })
+    })
+</script>
 </html>

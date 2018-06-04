@@ -14,14 +14,18 @@ public class Role implements GrantedAuthority, Serializable {
     @Column(name = "id")
     private String id;
 
+    @Column(name = "name")
+    private String name;
+
     @Column(name = "descricao")
     private String descricao;
 
     @Column(name = "api")
     private String api;
 
-    @Column(name = "status")
-    private String status;
+    @Column(name = "enabled")
+    private String enabled;
+
 
     public String getId() {
         return id;
@@ -31,9 +35,12 @@ public class Role implements GrantedAuthority, Serializable {
         this.id = id;
     }
 
-    @Override
-    public String getAuthority() {
-        return this.descricao;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescricao() {
@@ -44,4 +51,24 @@ public class Role implements GrantedAuthority, Serializable {
         this.descricao = descricao;
     }
 
+    public String getApi() {
+        return api;
+    }
+
+    public void setApi(String api) {
+        this.api = api;
+    }
+
+    public String getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(String enabled) {
+        this.enabled = enabled;
+    }
+
+    @Override
+    public String getAuthority() {
+        return descricao;
+    }
 }

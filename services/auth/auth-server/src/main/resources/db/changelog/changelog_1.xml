@@ -67,7 +67,7 @@
             <column name="userId" type="varchar(255)"/>
             <column name="clientId" type="varchar(255)"/>
             <column name="scope" type="varchar(255)"/>
-            <column name="status" type="varchar(10)"/>
+            <column name="enabled" type="varchar(10)"/>
             <column name="expiresAt" type="datetime"/>
             <column name="lastModifiedAt" type="datetime"/>
         </createTable>

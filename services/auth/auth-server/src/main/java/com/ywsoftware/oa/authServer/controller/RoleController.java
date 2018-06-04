@@ -26,7 +26,7 @@ public class RoleController {
     }
 
     @ApiOperation(value = "根据id,保存或者更新权限信息")
-    @PutMapping("/saveOrUpdate")
+    @PostMapping("/saveOrUpdate")
     public Role save(Role role) {
         return roleService.save(role);
     }

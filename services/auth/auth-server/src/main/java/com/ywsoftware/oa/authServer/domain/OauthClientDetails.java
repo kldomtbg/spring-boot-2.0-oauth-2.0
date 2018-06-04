@@ -1,16 +1,15 @@
 package com.ywsoftware.oa.authServer.domain;
 
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "oauth_client_details")
 
 public class OauthClientDetails {
     @Id
-    @GeneratedValue(generator = "system_uuid")
-    @GenericGenerator(name = "system_uuid", strategy = "uuid")
     @Column(name = "clientId", unique = true, nullable = false, length = 20)
     private String clientId;
     @Column(name = "resource_ids")
