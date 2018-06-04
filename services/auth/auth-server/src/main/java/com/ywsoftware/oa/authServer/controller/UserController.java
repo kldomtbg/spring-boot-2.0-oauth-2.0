@@ -1,8 +1,6 @@
 package com.ywsoftware.oa.authServer.controller;
 
 
-import com.ywsoftware.oa.authServer.controller.base.ExtendController;
-import com.ywsoftware.oa.authServer.domain.User;
 import com.ywsoftware.oa.authServer.domain.dto.UsuarioDTO;
 import com.ywsoftware.oa.authServer.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +14,7 @@ import java.security.Principal;
 
 @RestController
 @RequestMapping(value = "/user", produces = MediaType.APPLICATION_JSON_VALUE)
-public class UserController extends ExtendController<User> {
+public class UserController {
 
     @Autowired
     private UserService usuarioService;

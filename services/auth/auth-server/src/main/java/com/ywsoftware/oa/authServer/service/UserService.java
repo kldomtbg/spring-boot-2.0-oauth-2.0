@@ -3,7 +3,7 @@ package com.ywsoftware.oa.authServer.service;
 
 import com.ywsoftware.oa.authServer.domain.User;
 import com.ywsoftware.oa.authServer.domain.dto.UsuarioDTO;
-import com.ywsoftware.oa.authServer.repository.UsuarioRepository;
+import com.ywsoftware.oa.authServer.repository.UserRepository;
 import com.ywsoftware.oa.authServer.utils.ModelMapperConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 public class UserService implements UserDetailsService {
 
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    private UserRepository usuarioRepository;
     @Autowired
     private ModelMapperConverter modelMapperConverter;
 
