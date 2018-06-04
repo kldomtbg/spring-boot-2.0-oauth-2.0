@@ -3,7 +3,7 @@ package com.ywsoftware.oa.authServer.domain.dto;
 import java.io.Serializable;
 import java.util.Set;
 
-public class UsuarioDTO implements Serializable {
+public class UserDTO implements Serializable {
 
     private String nome;
     private String userName;

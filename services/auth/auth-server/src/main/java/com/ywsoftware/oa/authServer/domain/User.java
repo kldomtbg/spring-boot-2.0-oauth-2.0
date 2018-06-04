@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "tb_usuario", schema = "acessos")
+@Table(name = "tb_user")
 public class User implements UserDetails, Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -19,7 +19,7 @@ public class User implements UserDetails, Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private String id;
 
     @Column(name = "user_name", unique = true)
     private String userName;
@@ -44,19 +44,19 @@ public class User implements UserDetails, Serializable {
 
     @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "tb_usuario_permissao", schema = "acessos", joinColumns = {@JoinColumn(name = "id_usuario")},
-            inverseJoinColumns = {@JoinColumn(name = "id_permissao")})
-    private Set<Permissao> permissoes;
+    @JoinTable(name = "tb_user_role", joinColumns = {@JoinColumn(name = "id_user")},
+            inverseJoinColumns = {@JoinColumn(name = "id_role")})
+    private Set<Role> permissoes;
 
     public User() {
         this.permissoes = new HashSet<>();
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -92,11 +92,11 @@ public class User implements UserDetails, Serializable {
         return enabled;
     }
 
-    public Set<Permissao> getPermissoes() {
+    public Set<Role> getPermissoes() {
         return permissoes;
     }
 
-    public void setPermissoes(Set<Permissao> permissoes) {
+    public void setPermissoes(Set<Role> permissoes) {
         this.permissoes = permissoes;
     }
 

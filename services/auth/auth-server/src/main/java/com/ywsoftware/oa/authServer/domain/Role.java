@@ -9,8 +9,8 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "tb_permissao", schema = "acessos")
-public class Permissao implements GrantedAuthority, Serializable {
+@Table(name = "tb_role")
+public class Role implements GrantedAuthority, Serializable {
 
     @Id
     @Column(name = "id")
@@ -18,6 +18,12 @@ public class Permissao implements GrantedAuthority, Serializable {
 
     @Column(name = "descricao")
     private String descricao;
+
+    @Column(name = "api")
+    private String api;
+
+    @Column(name = "status")
+    private String status;
 
     public Long getId() {
         return id;

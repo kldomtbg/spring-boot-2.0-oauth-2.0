@@ -1,7 +1,7 @@
 package com.ywsoftware.oa.authServer.config;
 
 
-import com.ywsoftware.oa.authServer.service.UserService;
+import com.ywsoftware.oa.authServer.service.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,7 +18,7 @@ import javax.annotation.Resource;
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Resource
-    private UserService usuarioService;
+    private UserDetailsServiceImpl userDetailsService;
 
     @SuppressWarnings("deprecation")
     @Bean
@@ -28,7 +28,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(usuarioService);
+        auth.userDetailsService(userDetailsService);
     }
 
     /*@Bean

@@ -15,7 +15,7 @@ Spring:
         clientAuthenticationScheme: form
         authenticationScheme: query
         tokenName: oauth_token
-        userInfoUri: http://localhost:8080/autenticacao/v1/usuario #http://localhost:8000/rest/hello/principal
+        userInfoUri: http://localhost:8080/autenticacao/v1/user #http://localhost:8000/rest/hello/principal
       resource:
-        userInfoUri: http://localhost:8080/autenticacao/v1/usuario #http://localhost:8000/rest/hello/principal
+        userInfoUri: http://localhost:8080/autenticacao/v1/user #http://localhost:8000/rest/hello/principal
 

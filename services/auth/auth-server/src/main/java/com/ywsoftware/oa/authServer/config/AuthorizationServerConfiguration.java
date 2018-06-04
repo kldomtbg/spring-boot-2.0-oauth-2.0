@@ -1,6 +1,6 @@
 package com.ywsoftware.oa.authServer.config;
 
-import com.ywsoftware.oa.authServer.service.UserService;
+import com.ywsoftware.oa.authServer.service.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -25,7 +25,7 @@ import java.util.Arrays;
 public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
     @Resource
-    private UserService usuarioService;
+    private UserDetailsServiceImpl userDetailsService;
 
     @Resource
     private AuthenticationManager authenticationManager;
@@ -51,7 +51,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
         endpoints.tokenStore(tokenStore())
                 .tokenEnhancer(tokenEnhancerChain)
                 .authenticationManager(authenticationManager)
-                .userDetailsService(usuarioService);
+                .userDetailsService(userDetailsService);
     }
 
     @Bean
