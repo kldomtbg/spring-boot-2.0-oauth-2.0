@@ -12,12 +12,6 @@ spring:
     username: root
     password: 123456
 
-  liquibase:
-          change-log: classpath:db/changelog-master.xml
-          enabled: true
-          default-schema: acessos
-          user: ${spring.datasource.username}
-          password: ${spring.datasource.password}
   jpa:
       database-platform: org.hibernate.dialect.MySQLDialect
       hibernate:
@@ -42,12 +36,3 @@ mail:
 mybatis:
      type-aliases-package: com.ywsoftware.oa.authServer.mybatis.pojo
      mapper-locations: classpath:mapper/*.xml
-mapper:
-    mappers: com.ywsoftware.oa.authServer.mybatis.CustomMapper
-    not-empty: false
-    identity: MYSQL
-pagehelper:
-     helperDialect: mysql
-     reasonable: true
-     supportMethodsArguments: true
-     params: count=countSql
