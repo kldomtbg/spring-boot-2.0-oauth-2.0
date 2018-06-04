@@ -2,10 +2,7 @@ package com.ywsoftware.oa.authServer.domain;
 
 import org.springframework.security.core.GrantedAuthority;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -13,8 +10,9 @@ import java.io.Serializable;
 public class Role implements GrantedAuthority, Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private String id;
 
     @Column(name = "descricao")
     private String descricao;
@@ -25,11 +23,11 @@ public class Role implements GrantedAuthority, Serializable {
     @Column(name = "status")
     private String status;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

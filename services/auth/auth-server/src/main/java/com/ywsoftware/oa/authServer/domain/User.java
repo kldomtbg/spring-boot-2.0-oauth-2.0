@@ -42,14 +42,17 @@ public class User implements UserDetails, Serializable {
     @Column(name = "enabled")
     private Boolean enabled;
 
+    @Column(name = "clientId")
+    private String clientId;
+
     @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "tb_user_role", joinColumns = {@JoinColumn(name = "id_user")},
             inverseJoinColumns = {@JoinColumn(name = "id_role")})
-    private Set<Role> permissoes;
+    private Set<Role> roles;
 
     public User() {
-        this.permissoes = new HashSet<>();
+        this.roles = new HashSet<>();
     }
 
     public String getId() {
@@ -92,17 +95,17 @@ public class User implements UserDetails, Serializable {
         return enabled;
     }
 
-    public Set<Role> getPermissoes() {
-        return permissoes;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
-    public void setPermissoes(Set<Role> permissoes) {
-        this.permissoes = permissoes;
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return this.permissoes;
+        return this.roles;
     }
 
     @Override
@@ -153,5 +156,13 @@ public class User implements UserDetails, Serializable {
 
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public String getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
     }
 }

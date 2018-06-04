@@ -8,7 +8,7 @@ public class UserDTO implements Serializable {
     private String nome;
     private String userName;
     private Boolean enabled;
-    private Set<DominioDTO> permissoes;
+    private Set<DominioDTO> role;
 
     public String getNome() {
         return nome;
@@ -34,11 +34,12 @@ public class UserDTO implements Serializable {
         this.enabled = enabled;
     }
 
-    public Set<DominioDTO> getPermissoes() {
-        return permissoes;
+
+    public Set<DominioDTO> getRole() {
+        return role;
     }
 
-    public void setPermissoes(Set<DominioDTO> permissoes) {
-        this.permissoes = permissoes;
+    public void setRole(Set<DominioDTO> role) {
+        this.role = role;
     }
 }

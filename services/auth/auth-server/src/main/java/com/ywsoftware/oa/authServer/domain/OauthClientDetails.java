@@ -1,24 +1,38 @@
 package com.ywsoftware.oa.authServer.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "oauth_client_details")
+
 public class OauthClientDetails {
-
+    @Id
+    @GeneratedValue(generator = "system_uuid")
+    @GenericGenerator(name = "system_uuid", strategy = "uuid")
+    @Column(name = "clientId", unique = true, nullable = false, length = 20)
     private String clientId;
+    @Column(name = "resource_ids")
     private String resourceIds;
+    @Column(name = "client_secret")
     private String clientSecret;
+    @Column(name = "scope")
     private String scope;
+    @Column(name = "authorized_grant_types")
     private String authorizedGrantTypes;
+    @Column(name = "web_server_redirect_uri")
     private String webServerRedirectUri;
+    @Column(name = "authorities")
     private String authorities;
-    private long accessTokenValidity;
-    private long refreshTokenValidity;
+    @Column(name = "access_token_validity")
+    private Long accessTokenValidity;
+    @Column(name = "refresh_token_validity")
+    private Long refreshTokenValidity;
+    @Column(name = "additional_information")
     private String additionalInformation;
+    @Column(name = "autoapprove")
     private String autoapprove;
-
 
     public String getClientId() {
         return clientId;
@@ -83,20 +97,20 @@ public class OauthClientDetails {
     }
 
 
-    public long getAccessTokenValidity() {
+    public Long getAccessTokenValidity() {
         return accessTokenValidity;
     }
 
-    public void setAccessTokenValidity(long accessTokenValidity) {
+    public void setAccessTokenValidity(Long accessTokenValidity) {
         this.accessTokenValidity = accessTokenValidity;
     }
 
 
-    public long getRefreshTokenValidity() {
+    public Long getRefreshTokenValidity() {
         return refreshTokenValidity;
     }
 
-    public void setRefreshTokenValidity(long refreshTokenValidity) {
+    public void setRefreshTokenValidity(Long refreshTokenValidity) {
         this.refreshTokenValidity = refreshTokenValidity;
     }
 

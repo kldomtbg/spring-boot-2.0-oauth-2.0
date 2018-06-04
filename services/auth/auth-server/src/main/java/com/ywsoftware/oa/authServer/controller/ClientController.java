@@ -26,7 +26,7 @@ public class ClientController {
     }
 
     @ApiOperation(value = "根据id,保存或者更新client信息")
-    @PutMapping("/saveOrUpdate")
+    @PostMapping("/saveOrUpdate")
     public OauthClientDetails save(OauthClientDetails oauthClientDetails) {
         return clientService.save(oauthClientDetails);
     }
