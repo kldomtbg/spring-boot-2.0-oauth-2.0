@@ -10,9 +10,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
-/**
- * Created by Vladimir Vashchuk on 30.05.2018
- */
+
 public class CustomerSpecification implements Specification<Customer> {
 
     private SearchCriteria criteria;

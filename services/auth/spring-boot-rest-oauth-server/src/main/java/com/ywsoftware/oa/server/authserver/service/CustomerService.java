@@ -4,9 +4,6 @@ import com.ywsoftware.oa.server.authserver.model.Customer;
 
 import java.util.List;
 
-/**
- * Created by Vladimir Vashchuk on 31.05.2018
- */
 public interface CustomerService {
 
     List<Customer> findAll(String search);

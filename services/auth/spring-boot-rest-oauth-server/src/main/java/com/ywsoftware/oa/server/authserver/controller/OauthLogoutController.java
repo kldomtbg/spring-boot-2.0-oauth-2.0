@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * Created by Vladimir Vashchuk on 05.06.2018
- */
+
 @RestController
 public class OauthLogoutController {
 

@@ -4,9 +4,6 @@ import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 
-/**
- * Created by Vladimir Vashchuk on 30.05.2018
- */
 @Entity
 @Table(name = "AUTHORITY", uniqueConstraints = {@UniqueConstraint(columnNames = {"NAME"})})
 public class Authority implements GrantedAuthority {

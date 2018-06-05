@@ -21,9 +21,6 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 
-/**
- * Created by Vladimir Vashchuk on 30.05.2018
- */
 
 @RunWith(SpringRunner.class)
 public class CustomerServiceImplTest {

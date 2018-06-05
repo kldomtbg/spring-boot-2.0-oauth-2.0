@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
 
-/**
- * Created by Vladimir Vashchuk on 30.05.2018
- */
+
 @RestController
 @RequestMapping("/secured/user")
 public class UserController {

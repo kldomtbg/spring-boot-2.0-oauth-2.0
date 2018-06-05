@@ -7,9 +7,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
 
-/**
- * Created by Vladimir Vashchuk on 30.05.2018
- */
 @Entity
 @Table(name = "USERS", uniqueConstraints = {@UniqueConstraint(columnNames = {"USER_NAME"})})
 public class User implements UserDetails, Serializable {

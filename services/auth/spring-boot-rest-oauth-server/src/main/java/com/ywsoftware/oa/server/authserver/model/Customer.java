@@ -8,9 +8,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
-/**
- * Created by Vladimir Vashchuk on 30.05.2018
- */
 @Entity
 @Table(name = "customers")
 public class Customer {

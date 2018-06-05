@@ -22,9 +22,6 @@ import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 
-/**
- * Created by Vladimir Vashchuk on 30.05.2018
- */
 @Configuration
 @EnableAuthorizationServer
 @EnableGlobalMethodSecurity(prePostEnabled = true)

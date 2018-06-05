@@ -1,8 +1,6 @@
 package com.ywsoftware.oa.server.authserver.repository.spec;
 
-/**
- * Created by Vladimir Vashchuk on 30.05.2018
- */
+
 class SearchCriteria {
     private String key;
     private String operation;

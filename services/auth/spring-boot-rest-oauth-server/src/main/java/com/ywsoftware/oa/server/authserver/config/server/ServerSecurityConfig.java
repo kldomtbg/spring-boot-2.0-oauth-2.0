@@ -17,9 +17,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.annotation.Resource;
 
-/**
- * Created by Vladimir Vashchuk on 30.05.2018
- */
 @Configuration
 @EnableWebSecurity
 @Order(SecurityProperties.BASIC_AUTH_ORDER)

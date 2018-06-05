@@ -13,10 +13,6 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by Vladimir Vashchuk on 30.05.2018
- */
-
 @Service
 public class CustomerServiceImpl implements CustomerService {
 

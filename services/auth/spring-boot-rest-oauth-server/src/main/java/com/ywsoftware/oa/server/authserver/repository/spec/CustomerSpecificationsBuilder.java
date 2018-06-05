@@ -8,9 +8,7 @@ import org.springframework.data.jpa.domain.Specification;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Vladimir Vashchuk on 30.05.2018
- */
+
 public class CustomerSpecificationsBuilder {
 
     private final List<SearchCriteria> params;

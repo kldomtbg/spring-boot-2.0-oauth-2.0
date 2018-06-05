@@ -6,9 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Vladimir Vashchuk on 31.05.2018
- */
+
 public class CustomerTestUtil {
     private static final String DEFAULT_NAME_PATTERN = "newCustomer%d";
     private static final String DEFAULT_MAIL_PATTERN = "mail%d@mail.com";

@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * Created by Vladimir Vashchuk on 30.05.2018
- */
 
 @RestController
 @RequestMapping("/secured/customer")

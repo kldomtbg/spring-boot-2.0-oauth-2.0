@@ -9,9 +9,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManagerFactory;
 
-/**
- * Created by Vladimir Vashchuk on 05.06.2018
- */
 @Configuration
 @EnableTransactionManagement
 public class HibernateConfiguration {
