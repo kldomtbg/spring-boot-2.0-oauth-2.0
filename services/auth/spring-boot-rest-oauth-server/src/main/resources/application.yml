@@ -7,16 +7,14 @@ spring:
   application:
     name: auth-server
   datasource:
-    #数据库连接属性
-    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/mytest1?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
     username: root
     password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
       database-platform: org.hibernate.dialect.MySQLDialect
       hibernate:
-        #配置了实体类维护数据库表结构的具体行为, update 表示当实体类的属性发生变化时, 表结构跟着更新.使用 create 可以进行删库操作,慎用
         ddl-auto: update
       show-sql: true
       database: mysql
