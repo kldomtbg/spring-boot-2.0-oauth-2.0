@@ -1,21 +1,32 @@
+security:
+  oauth2:
+    client:
+      client-id: acme
+      client-secret: acmesecret
+      scope: read,write
+      auto-approve-scopes: '.*'
+
+github:
+    client:
+      clientId: spring-security-oauth2-read-client  #client
+      clientSecret: spring-security-oauth2-read-client-password1234  #security
+      accessTokenUri: http://localhost:8080/oauth/token #http://localhost:8000/oauth/token
+      userAuthorizationUri: http://localhost:8080/oauth/authorize # http://localhost:8000//oauth/authorize
+      clientAuthenticationScheme: form
+      authenticationScheme: query
+
+    resource:
+      userInfoUri: http://localhost:8080/secured/user #http://localhost:8000/rest/hello/principal
+
+
+
+
+logging:
+  level:
+    org.springframework.security: DEBUG
 server:
-  port: 8081
+  port: 8888
   servlet:
     session:
       cookie:
-        name: authserver
-Spring:
-  security:
-    oauth2:
-      client:
-        clientId: clientapp #client
-        clientSecret: 123456 #security
-        accessTokenUri: http://localhost:8080/autenticacao/oauth/token #http://localhost:8000/oauth/token
-        userAuthorizationUri: http://localhost:8080/autenticacao/oauth/authorize # http://localhost:8000//oauth/authorize
-        clientAuthenticationScheme: form
-        authenticationScheme: query
-        tokenName: oauth_token
-        userInfoUri: http://localhost:8080/autenticacao/v1/user #http://localhost:8000/rest/hello/principal
-      resource:
-        userInfoUri: http://localhost:8080/autenticacao/v1/user #http://localhost:8000/rest/hello/principal
-
+        name: weqdfqwedqwd

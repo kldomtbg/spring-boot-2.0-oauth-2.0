@@ -16,7 +16,8 @@
     </parent>
 
     <modules>
-        <module>services/auth/auth-server</module>
+        <module>services/auth/spring-boot-rest-oauth-server</module>
+        <module>example/auth-client</module>
     </modules>
 
     <build>
