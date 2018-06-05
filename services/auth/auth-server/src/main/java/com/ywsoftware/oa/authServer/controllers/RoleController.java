@@ -1,7 +1,7 @@
-package com.ywsoftware.oa.authServer.controller;
+package com.ywsoftware.oa.authServer.controllers;
 
-import com.ywsoftware.oa.authServer.domain.Role;
-import com.ywsoftware.oa.authServer.service.RoleService;
+import com.ywsoftware.oa.authServer.core.entity.Role;
+import com.ywsoftware.oa.authServer.core.service.RoleService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

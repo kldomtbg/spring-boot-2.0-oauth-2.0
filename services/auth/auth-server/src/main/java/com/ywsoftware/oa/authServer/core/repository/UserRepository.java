@@ -1,14 +1,16 @@
 package com.ywsoftware.oa.authServer.core.repository;
 
+
 import com.ywsoftware.oa.authServer.core.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
-public interface UserRepository {
-    User read(String id);
+@Repository
+public interface UserRepository extends JpaRepository<User, String> {
 
-    User create(User user);
+    @Query("SELECT u FROM User u WHERE u.userName =:userName")
+    User findByLogin(@Param("userName") String userName);
 
-    void update(String name, String id);
-
-    void delete(String id);
 }
-

@@ -28,7 +28,7 @@ public class Swagger2Config {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("Simple APIs")
                 .description("simple apis")
-                .termsOfServiceUrl("http://www.gm.com")
+                .termsOfServiceUrl("http://blog.coderstory.cn")
                 .contact(new Contact("coderstory", "http://blog.coderstory.cn", "26735825@qq.com"))
                 .version("1.0")
                 .build();

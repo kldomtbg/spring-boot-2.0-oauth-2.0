@@ -1,7 +1,7 @@
-package com.ywsoftware.oa.authServer.service;
+package com.ywsoftware.oa.authServer.core.service;
 
-import com.ywsoftware.oa.authServer.domain.OauthClientDetails;
-import com.ywsoftware.oa.authServer.repository.ClientRepository;
+import com.ywsoftware.oa.authServer.core.entity.OauthClientDetails;
+import com.ywsoftware.oa.authServer.core.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

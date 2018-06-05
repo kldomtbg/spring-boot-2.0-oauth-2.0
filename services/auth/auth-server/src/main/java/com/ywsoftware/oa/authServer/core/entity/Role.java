@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.authServer.domain;
+package com.ywsoftware.oa.authServer.core.entity;
 
 import org.springframework.security.core.GrantedAuthority;
 

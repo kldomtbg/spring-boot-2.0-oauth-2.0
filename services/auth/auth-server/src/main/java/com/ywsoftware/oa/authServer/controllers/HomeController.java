@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.authServer.controller;
+package com.ywsoftware.oa.authServer.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

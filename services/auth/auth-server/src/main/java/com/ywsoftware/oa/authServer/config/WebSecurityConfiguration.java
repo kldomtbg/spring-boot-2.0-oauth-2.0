@@ -1,7 +1,7 @@
 package com.ywsoftware.oa.authServer.config;
 
 
-import com.ywsoftware.oa.authServer.service.UserDetailsServiceImpl;
+import com.ywsoftware.oa.authServer.core.service.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -31,10 +31,6 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userDetailsService);
     }
 
-    /*@Bean
-    public PasswordEncoder passwordEncoder() {
-        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
-    }*/
 
     @Override
     @Bean
@@ -46,11 +42,10 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.headers().frameOptions().disable();
         http
-                .authorizeRequests().antMatchers("/static/**", "/druid/**").permitAll()
+                .authorizeRequests().antMatchers("/static/**", "/druid/**", "/favicon.ico").permitAll()
                 .antMatchers("/swagger**", "/swagger-resources/**", "/webjars/**").permitAll()
                 .anyRequest().authenticated()
                 .and().formLogin().permitAll()
                 .and().csrf().disable();
     }
-
 }

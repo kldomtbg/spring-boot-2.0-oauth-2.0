@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.authServer.controller.oauth;
+package com.ywsoftware.oa.authServer.controllers.oauth;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

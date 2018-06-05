@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.authServer.domain.dto;
+package com.ywsoftware.oa.authServer.core.entity.dto;
 
 import java.io.Serializable;
 import java.util.Set;
@@ -8,7 +8,7 @@ public class UserDTO implements Serializable {
     private String id;
     private String userName;
     private Boolean enabled;
-    private Set<DominioDTO> role;
+    private Set<roleDTO> role;
     private String clientId;
 
     public String getUserName() {
@@ -28,11 +28,11 @@ public class UserDTO implements Serializable {
     }
 
 
-    public Set<DominioDTO> getRole() {
+    public Set<roleDTO> getRole() {
         return role;
     }
 
-    public void setRole(Set<DominioDTO> role) {
+    public void setRole(Set<roleDTO> role) {
         this.role = role;
     }
 

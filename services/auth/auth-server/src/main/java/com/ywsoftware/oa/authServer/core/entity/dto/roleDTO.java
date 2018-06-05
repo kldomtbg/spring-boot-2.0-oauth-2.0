@@ -1,8 +1,8 @@
-package com.ywsoftware.oa.authServer.domain.dto;
+package com.ywsoftware.oa.authServer.core.entity.dto;
 
 import java.io.Serializable;
 
-public class DominioDTO implements Serializable {
+public class roleDTO implements Serializable {
 
     private Long id;
     private String descricao;

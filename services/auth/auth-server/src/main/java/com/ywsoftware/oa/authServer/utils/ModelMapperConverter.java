@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Type;
 
+/**
+ * 自定义转换器
+ */
 @Component
 public class ModelMapperConverter {
 

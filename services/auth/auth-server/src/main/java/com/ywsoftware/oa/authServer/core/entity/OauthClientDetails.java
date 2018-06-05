@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.authServer.domain;
+package com.ywsoftware.oa.authServer.core.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

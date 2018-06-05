@@ -1,8 +1,8 @@
-package com.ywsoftware.oa.authServer.controller.oauth;
+package com.ywsoftware.oa.authServer.controllers.oauth;
 
 
-import com.ywsoftware.oa.authServer.domain.dto.UserDTO;
-import com.ywsoftware.oa.authServer.service.UserDetailsServiceImpl;
+import com.ywsoftware.oa.authServer.core.entity.dto.UserDTO;
+import com.ywsoftware.oa.authServer.core.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.access.prepost.PreAuthorize;

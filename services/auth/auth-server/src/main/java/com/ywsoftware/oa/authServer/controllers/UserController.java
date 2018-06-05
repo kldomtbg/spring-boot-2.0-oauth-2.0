@@ -1,8 +1,8 @@
-package com.ywsoftware.oa.authServer.controller;
+package com.ywsoftware.oa.authServer.controllers;
 
-import com.ywsoftware.oa.authServer.domain.User;
-import com.ywsoftware.oa.authServer.domain.dto.UserDTO;
-import com.ywsoftware.oa.authServer.service.UserService;
+import com.ywsoftware.oa.authServer.core.entity.User;
+import com.ywsoftware.oa.authServer.core.entity.dto.UserDTO;
+import com.ywsoftware.oa.authServer.core.service.UserService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

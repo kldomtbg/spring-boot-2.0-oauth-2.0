@@ -1,7 +1,7 @@
-package com.ywsoftware.oa.authServer.service;
+package com.ywsoftware.oa.authServer.core.service;
 
-import com.ywsoftware.oa.authServer.domain.Role;
-import com.ywsoftware.oa.authServer.repository.RoleRepository;
+import com.ywsoftware.oa.authServer.core.entity.Role;
+import com.ywsoftware.oa.authServer.core.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

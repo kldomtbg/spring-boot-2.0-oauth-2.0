@@ -1,9 +1,9 @@
-package com.ywsoftware.oa.authServer.service;
+package com.ywsoftware.oa.authServer.core.service;
 
 
-import com.ywsoftware.oa.authServer.domain.User;
-import com.ywsoftware.oa.authServer.domain.dto.UserDTO;
-import com.ywsoftware.oa.authServer.repository.UserRepository;
+import com.ywsoftware.oa.authServer.core.entity.User;
+import com.ywsoftware.oa.authServer.core.entity.dto.UserDTO;
+import com.ywsoftware.oa.authServer.core.repository.UserRepository;
 import com.ywsoftware.oa.authServer.utils.ModelMapperConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -37,6 +37,5 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         User user = (User) authentication.getPrincipal();
         return modelMapperConverter.converterStrict(user, UserDTO.class);
     }
-
 
 }
