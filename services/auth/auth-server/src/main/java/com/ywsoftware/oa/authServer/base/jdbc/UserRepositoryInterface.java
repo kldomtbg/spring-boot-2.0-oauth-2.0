@@ -12,7 +12,6 @@ public interface UserRepositoryInterface extends JpaRepository<User, String> {
     @Query("from User u where u.id =?1")
     User findUser(String id);
 
-    @Transactional
     @Modifying
     @Query("update User u set u.name = ?1 where u.id = ?2")
     int update(String name, String id);

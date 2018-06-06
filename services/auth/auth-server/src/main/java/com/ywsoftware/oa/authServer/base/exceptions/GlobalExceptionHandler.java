@@ -1,8 +1,7 @@
-package com.ywsoftware.oa.authServer.base.exception;
+package com.ywsoftware.oa.authServer.base.exceptions;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -13,25 +12,22 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 全局异常处理
  */
-@CrossOrigin
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-    private static Logger LOGGER = LoggerFactory.getLogger(GlobalExceptionHandler.class);
-
-    @Value("${mail.enable}")
-    private String port;
+    private static Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler
     public String processException(Exception ex, HttpServletRequest request, HttpServletResponse response) {
         // 输出信息进行持久化
-        LOGGER.error(ex.getMessage());
-        for (StackTraceElement stack: ex.getStackTrace()) {
-            LOGGER.error("  " + stack.toString());
+        logger.error(ex.getMessage());
+        for (StackTraceElement stack : ex.getStackTrace()) {
+            logger.error("  " + stack.toString());
         }
         if (ex instanceof ApplicationException) {
-            // 应用异常
+            //TODO 应用异常
 
-        }  else {
+        } else {
+            //TODO 应用异常
         }
         ex.printStackTrace();
         return ex.getMessage();

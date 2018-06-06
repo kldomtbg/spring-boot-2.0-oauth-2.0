@@ -1,21 +1,18 @@
-package com.ywsoftware.oa.authServer.core.service;
+package com.ywsoftware.oa.authServer.core.services;
 
 import com.ywsoftware.oa.authServer.core.entity.User;
-import com.ywsoftware.oa.authServer.core.repository.UserRepository;
+import com.ywsoftware.oa.authServer.core.repositorys.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 public class UserService {
     private UserRepository userRepository;
-    private RestTemplate restTemplate;
 
     @Autowired
-    public UserService(UserRepository _userRepository, RestTemplate _restTemplate) {
+    public UserService(UserRepository _userRepository) {
         this.userRepository = _userRepository;
-        this.restTemplate = _restTemplate;
     }
 
     /**
@@ -62,10 +59,6 @@ public class UserService {
      */
     public User read(String id) {
         return userRepository.read(id);
-    }
-
-    public String testRestTemplate() {
-        return restTemplate.getForObject("http://www.baidu.com", String.class);
     }
 
 

@@ -7,11 +7,7 @@ import javax.persistence.Transient;
 import javax.validation.constraints.Email;
 
 @Entity
-public class User {
-    @Id
-    @Column(nullable = false, length = 36)
-    private String id;
-
+public class User extends EntityImpl implements AggregateRoot {
     @Column(nullable = false)
     private String name;
 
@@ -27,23 +23,14 @@ public class User {
     private String test;
 
     public User() {
-
+        super();
     }
 
     public User(String _id, String _name, String _passWord, String _email) {
-        this.id = _id;
+        super(_id);
         this.name = _name;
         this.passWord = _passWord;
         this.email = _email;
-    }
-
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {

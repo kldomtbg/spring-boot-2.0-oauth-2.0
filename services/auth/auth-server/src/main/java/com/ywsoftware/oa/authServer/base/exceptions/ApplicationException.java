@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.authServer.base.exception;
+package com.ywsoftware.oa.authServer.base.exceptions;
 
 /**
  * 定义应用异常, 自定义异常继承该类

@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.authServer.base.exception;
+package com.ywsoftware.oa.authServer.base.exceptions;
 
 /**
  * 自定义异常, 无权限

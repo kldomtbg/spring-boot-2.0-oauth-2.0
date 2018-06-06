@@ -1,10 +1,12 @@
 package com.ywsoftware.oa.authServer;
 
-import com.ywsoftware.oa.authServer.core.service.TestMockService;
+import com.ywsoftware.oa.authServer.core.services.TestMockService;
+import com.ywsoftware.oa.authServer.core.services.UserService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InOrder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -20,11 +22,8 @@ import static org.mockito.Mockito.*;
 @Rollback(false)
 public class UserServiceTest {
     private static Assert anAssert;
-    /*@Autowired
+    @Autowired
     UserService userService;
-
-
-
 
     @Test
     public void saveUser() {
@@ -45,7 +44,7 @@ public class UserServiceTest {
     public void getUser() {
         userService.read("付玉");
 
-    }*/
+    }
 
     @Test
     public void test() {

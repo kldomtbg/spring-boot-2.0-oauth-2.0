@@ -1,8 +1,7 @@
 package com.ywsoftware.oa.authServer.base.jdbc;
 
-import com.ywsoftware.oa.authServer.base.jdbc.UserRepositoryInterface;
 import com.ywsoftware.oa.authServer.core.entity.User;
-import com.ywsoftware.oa.authServer.core.repository.UserRepository;
+import com.ywsoftware.oa.authServer.core.repositorys.UserRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository

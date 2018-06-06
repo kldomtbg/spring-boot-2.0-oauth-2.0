@@ -1,7 +1,7 @@
 package com.ywsoftware.oa.authServer.controllers;
 
 import com.ywsoftware.oa.authServer.core.entity.User;
-import com.ywsoftware.oa.authServer.core.service.UserService;
+import com.ywsoftware.oa.authServer.core.services.UserService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -33,8 +33,4 @@ public class UserController {
         userService.delete(id);
     }
 
-    @RequestMapping("/test")
-    public void test() {
-        userService.testRestTemplate();
-    }
 }
