@@ -1,0 +1,6 @@
+server:
+  port: 9999
+  servlet:
+    session:
+      cookie:
+        name: weqdfq
