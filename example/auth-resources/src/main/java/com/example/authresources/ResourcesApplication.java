@@ -4,9 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AuthResourcesApplication {
+public class ResourcesApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AuthResourcesApplication.class, args);
+        SpringApplication.run(ResourcesApplication.class, args);
     }
+
 }

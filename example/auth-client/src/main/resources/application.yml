@@ -29,4 +29,4 @@ server:
   servlet:
     session:
       cookie:
-        name: weqdfqwedqwd
+        name: OAUTH2SESSION
