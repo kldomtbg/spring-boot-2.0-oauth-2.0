@@ -1,6 +1,5 @@
 package com.ywsoftware.oa.server.authserver.model.security;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
@@ -33,10 +32,13 @@ public class User implements UserDetails, Serializable {
     @Column(name = "ENABLED")
     private boolean enabled;
 
+    @Column(name = "CLIENT_ID")
+    private String clientId;
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "USERS_AUTHORITIES", joinColumns = @JoinColumn(name = "USER_ID", referencedColumnName = "ID"), inverseJoinColumns = @JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "ID"))
     @OrderBy
-    @JsonIgnore
+    //@JsonIgnore
     private Collection<Authority> authorities;
 
     @Override
@@ -120,5 +122,13 @@ public class User implements UserDetails, Serializable {
 
     public void setAuthorities(Collection<Authority> authorities) {
         this.authorities = authorities;
+    }
+
+    public String getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
     }
 }

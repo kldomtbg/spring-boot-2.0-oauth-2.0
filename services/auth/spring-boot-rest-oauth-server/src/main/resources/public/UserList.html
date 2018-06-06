@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container">
-    <a href="UserInfo.html">添加</a>
+    <a href="UserInfo.html" class="btn btn-info">添加</a>
 </div>
 <div class="container">
     <div class="panel panel-default">
@@ -33,12 +33,13 @@
         $.ajax("/user/", {
             success: function (data) {
                 data.forEach(function (user) {
+                    debugger;
                     var tr = $("<tr>")
-                    tr.append($("<td>" + user.userName + "</td>"))
+                    tr.append($("<td>" + user.username + "</td>"))
                         .append($("<td>" + user.clientId + "</td>"))
-                        .append($("<td>" + user.role + "</td>"))
+                        .append($("<td>" + (user.authorities ? user.authorities.map(x => x.name).toString() : "") + "</td>"))
                         .append($("<td>" + user.enabled + "</td>"))
-                        .append($("<td><a href='UserInfo.html?id=" + user.id + "'>修改</a></td>"))
+                        .append($("<td><a href='UserInfo.html?id=" + user.id + "'>修改</a></td>"));
                     $(".table").append(tr);
                 })
             }

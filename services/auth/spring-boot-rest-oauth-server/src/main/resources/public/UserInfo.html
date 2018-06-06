@@ -68,7 +68,7 @@
                     success: function (data) {
                         $("#userName").val(data.userName);
                         $("#clientId").val(data.clientId);
-                        $("#role").val(data.role);
+                        $("#role").val((user.authorities ? user.authorities.map(x => x.name).toString() : ""));
                         $("#enabled").val(data.enabled);
                     }
                 }
