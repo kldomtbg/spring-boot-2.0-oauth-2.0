@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Demo</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width"/>
+    <base href="/"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/3.2.0/css/bootstrap.css"/>
+    <script type="text/javascript" src="/webjars/jquery/2.1.1/jquery.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/3.2.0/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+    <a href="RoleInfo.html">添加</a>
+</div>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">client列表</div>
+        <table class="table">
+            <th>id</th>
+            <th>名字</th>
+            <th>描述</th>
+            <th>url</th>
+            <th>操作</th>
+        </table>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        $.ajax("/role/", {
+            success: function (data) {
+                data.forEach(function (role) {
+                    var tr = $("<tr>")
+                    tr.append($("<td>" + role.id + "</td>"))
+                        .append($("<td>" + role.name + "</td>"))
+                        .append($("<td>" + role.descricao + "</td>"))
+                        .append($("<td>" + role.api + "</td>"))
+                        .append($("<td><a href='RoleInfo.html?id=" + role.id + "'>修改</a></td>"))
+                    $(".table").append(tr);
+                })
+            }
+        })
+    })
+</script>
+</html>

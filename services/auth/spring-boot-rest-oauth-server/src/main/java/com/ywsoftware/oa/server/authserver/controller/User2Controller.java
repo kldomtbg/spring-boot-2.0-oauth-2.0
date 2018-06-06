@@ -1,0 +1,23 @@
+package com.ywsoftware.oa.server.authserver.controller;
+
+import com.ywsoftware.oa.server.authserver.service.CustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.security.Principal;
+
+
+@RestController
+@RequestMapping("/secured/user")
+public class User2Controller {
+
+    @Autowired
+    private CustomerService service;
+
+    @RequestMapping(method = RequestMethod.GET)
+    public Principal getPrincipal(Principal user) {
+        return user;
+    }
+}
