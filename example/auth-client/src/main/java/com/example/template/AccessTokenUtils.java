@@ -27,7 +27,7 @@ import static org.springframework.security.oauth2.common.OAuth2AccessToken.ACCES
 
 
 /**
- * Utilities to work with AccessTokens and SecurityContext.
+ * AccessTokens 和 SecurityContext 的工具类
  *
  * @author jbellmann
  */

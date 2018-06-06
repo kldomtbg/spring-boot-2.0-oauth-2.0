@@ -6,7 +6,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.security.oauth2.client.OAuth2RestOperations;
 import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.stereotype.Controller;
@@ -14,36 +13,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@PropertySource({"classpath:aouth2.properties"})
-//@Transactional(readOnly = true)
 class SpringOauth2ClientController {
 
     private static final Logger logger = LoggerFactory.getLogger(SpringOauth2ClientController.class);
     @Autowired
     OAuth2RestTemplate oAuth2RestTemplate;
     // 配置，配置单配置文件中比较合适下面的
-    @Value("spring-security-oauth2-read-client")
+    @Value("${github.client.clientId}")
     private String client_id;
-    @Value("spring-security-oauth2-read-client-password1234")
+    @Value("${github.client.clientSecret}")
     private String client_secret;
     private String[] scopes = new String[]{"read"};
     @Value("${resource_server_uri}")
     private String resource_server_url;
-    @Value("${access_token_uri}")
+    @Value("${github.client.accessTokenUri}")
     private String access_token_uri;
-    @Value("${user_authorization_uri}")
+    @Value("${github.client.userAuthorizationUri}")
     private String user_authorization_uri;
     @Autowired
     private Oauth2ClientRestTemplate restTemplate;
 
 
-//    @RequestMapping("/")
-//    public ModelAndView index() {
-//        logger.info("index controller");
-//        ModelAndView modelAndView = new ModelAndView();
-//        modelAndView.setViewName("index");
-//        return modelAndView;
-//    }
+/*    @RequestMapping("/")
+    public ModelAndView index() {
+        logger.info("index controller");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index");
+        return modelAndView;
+    }*/
 
     /**
      * 演示 grant_type=authorization_code 时，获取资源的方法
@@ -65,6 +62,7 @@ class SpringOauth2ClientController {
      *
      * @return
      */
+/*
     @RequestMapping("/implicit")
     @ResponseBody
     public JsonNode implicit() {
@@ -75,27 +73,28 @@ class SpringOauth2ClientController {
         return operations.getForObject(resource_server_url + "/foos/1", JsonNode.class);  // getForObject 发送 get 方法
     }
 
+*/
 
-//    /**
-//     * 演示 grant_type=password 时，获取资源的方法
-//     *
-//     * @return
-//     */
-//    @RequestMapping("/password")
-//    @ResponseBody
-//    public JsonNode resourceOwnerPassword() {
-//        logger.info("grant_type=password  ... ");
-//        OAuth2RestOperations operations = restTemplate.resourceOwnerPasswordRestTemplate(client_id, client_secret, access_token_uri, username, password, scopes);  // getForObject 发送 get 方法
-//        logger.info("access_token:" + operations.getAccessToken().getValue());
-//        return operations.getForObject(resource_server_url +"/foos/1", JsonNode.class);  // getForObject 发送 get 方法
-//
-//    }
+    /*    *//**
+     * 演示 grant_type=password 时，获取资源的方法
+     *
+     * @return
+     *//*
+    @RequestMapping("/password")
+    @ResponseBody
+    public JsonNode resourceOwnerPassword() {
+        logger.info("grant_type=password  ... ");
+        OAuth2RestOperations operations = restTemplate.resourceOwnerPasswordRestTemplate(client_id, client_secret, access_token_uri, username, password, scopes);  // getForObject 发送 get 方法
+        logger.info("access_token:" + operations.getAccessToken().getValue());
+        return operations.getForObject(resource_server_url +"/foos/1", JsonNode.class);  // getForObject 发送 get 方法
 
-    /**
+    }*/
+
+    /*    *//**
      * 演示 grant_type=client_credentials 时，获取资源的方法
      *
      * @return
-     */
+     *//*
     @RequestMapping("/client_credentials")
     @ResponseBody
     public JsonNode clientCredentials() {
@@ -104,5 +103,5 @@ class SpringOauth2ClientController {
         logger.info("access_token:" + operations.getAccessToken().getValue());
         logger.info("refresh_token:" + operations.getAccessToken().getRefreshToken());
         return operations.getForObject(resource_server_url + "/foos/1", JsonNode.class);  // getForObject 发送 get 方法
-    }
+    }*/
 }
