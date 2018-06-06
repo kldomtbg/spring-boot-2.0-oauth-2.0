@@ -9,11 +9,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface UserRepositoryInterface extends JpaRepository<User, String> {
-    @Query("from User u where u.id =?1")
+    @Query("FROM User u WHERE u.id = :id")
     User findUser(String id);
 
     @Modifying
-    @Query("update User u set u.name = ?1 where u.id = ?2")
+    @Query("UPDATE User u SET u.name = :name WHERE u.id = :id")
     int update(String name, String id);
 
 }

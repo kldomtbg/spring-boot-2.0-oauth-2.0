@@ -5,6 +5,7 @@ import com.ywsoftware.oa.authServer.core.services.UserService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api/User")
 public class UserController {
 
     private UserService userService;
@@ -13,22 +14,22 @@ public class UserController {
         this.userService = _userService;
     }
 
-    @PostMapping("/create")
-    public void create(String id, String name, String password, String email){
+    @PostMapping
+    public void create(String id, String name, String password, String email) {
         userService.create(id, name, password, email);
     }
 
-    @PutMapping("/update")
+    @PutMapping
     public void update(String name, String id) {
         userService.update(name, id);
     }
 
-    @GetMapping("/read")
+    @GetMapping
     public User read(String name) {
         return userService.read(name);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping
     public void delete(String id) {
         userService.delete(id);
     }

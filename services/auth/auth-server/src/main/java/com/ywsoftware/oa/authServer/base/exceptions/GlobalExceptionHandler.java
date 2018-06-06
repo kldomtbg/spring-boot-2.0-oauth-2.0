@@ -18,18 +18,13 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler
     public String processException(Exception ex, HttpServletRequest request, HttpServletResponse response) {
-        // 输出信息进行持久化
-        logger.error(ex.getMessage());
-        for (StackTraceElement stack : ex.getStackTrace()) {
-            logger.error("  " + stack.toString());
-        }
         if (ex instanceof ApplicationException) {
             //TODO 应用异常
+            logger.error(ex.getMessage(), ex);
 
         } else {
-            //TODO 应用异常
+            //TODO 非应用异常
         }
-        ex.printStackTrace();
         return ex.getMessage();
     }
 }
