@@ -12,6 +12,12 @@ import java.util.List;
 @RestController
 public class SampleController {
 
+    /**
+     * 演示调用资源服务读取数据
+     *
+     * @param oauth2User
+     * @return
+     */
     @GetMapping(value = "/api/subject")
     @CrossOrigin(origins = "*", methods = {RequestMethod.GET})
     public SubjectResponse subject(OAuth2Authentication oauth2User) {

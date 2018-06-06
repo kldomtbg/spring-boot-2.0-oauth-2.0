@@ -14,6 +14,12 @@ import org.springframework.security.oauth2.provider.token.ResourceServerTokenSer
 @EnableResourceServer
 public class Oauth2ResourceConfig extends ResourceServerConfigurerAdapter {
 
+    /**
+     * 配置接口安全
+     *
+     * @param http
+     * @throws Exception
+     */
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.cors();
@@ -27,6 +33,15 @@ public class Oauth2ResourceConfig extends ResourceServerConfigurerAdapter {
         return new DefaultAccessTokenConverter();
     }
 
+
+    /**
+     * 配置认证信息
+     * @param checkTokenUrl
+     * @param checkTokenParam
+     * @param clientId
+     * @param secret
+     * @return
+     */
     @Bean
     public ResourceServerTokenServices remoteTokenServices(
             @Value("${oauth2.resource.checkToken.url}") String checkTokenUrl,
