@@ -17,7 +17,8 @@
 
     <modules>
         <module>services/auth/spring-boot-rest-oauth-server</module>
-        <module>example/auth-client</module>
+        <module>examples/auth-client</module>
+        <module>examples/auth-resources</module>
     </modules>
 
     <build>
