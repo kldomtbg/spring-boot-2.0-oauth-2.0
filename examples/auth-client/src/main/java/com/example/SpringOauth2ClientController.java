@@ -34,14 +34,6 @@ class SpringOauth2ClientController {
     private Oauth2ClientRestTemplate restTemplate;
 
 
-/*    @RequestMapping("/")
-    public ModelAndView index() {
-        logger.info("index controller");
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("index");
-        return modelAndView;
-    }*/
-
     /**
      * 演示 grant_type=authorization_code 时，获取资源的方法
      *

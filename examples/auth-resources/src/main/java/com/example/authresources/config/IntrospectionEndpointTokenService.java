@@ -1,4 +1,4 @@
-package com.example.authresources;
+package com.example.authresources.config;
 
 import net.jodah.expiringmap.ExpirationPolicy;
 import net.jodah.expiringmap.ExpiringMap;
@@ -31,23 +31,16 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Queries the /check_token endpoint to obtain the contents of an access token.
- * <p>
- * If the endpoint returns a 400 or 401 response, this indicates that the token is invalid.
- * <p>
- * If the endpoint returns property "username" or "user_id" property, they will be translated as "user_name".
- * Note that RFC7662 requires "username", but Spring Security looks for "user_name"...
- * <p>
- * If the endpoint returns no "client_id" property, its value will be extracted from the "aud" property (if present).
- * <p>
- * If the endpoint contains an "aud" property, it will be removed.
- * <p>
- * If no clientId/clientSecret are defined, the request to the endpoint won't send an Authorization header.
- * <p>
- * If the endpoint returns only an error_description, it will fail.
+ * 查询 /check_token 端点以获取访问令牌的内容。
+ * 如果端点返回400或401响应，则表示该令牌无效。
+ * 如果端点返回属性“username”或“user_id”属性，则它们将被翻译为“user_name”。
+ * 请注意，RFC7662需要“username”，但Spring Security会查找“user_name”...
+ * 如果端点不返回“client_id”属性，则其值将从“aud”属性（如果存在）中提取。
+ * 如果端点包含“aud”属性，它将被删除。
+ * 如果未定义clientId / clientSecret，则对端点的请求将不会发送授权header。
+ * 如果端点只返回一个error_description，表示调用失败。 
  *
- * @author Dave Syer
- * @author Luke Taylor
+ *其实就是RemoteTokenServices 做了翻译
  */
 public class IntrospectionEndpointTokenService implements ResourceServerTokenServices {
 
