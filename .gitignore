@@ -10,3 +10,5 @@ application-dev.yml
 
 # node.js
 node_modules/
+
+!.mvn/wrapper/maven-wrapper.jar
