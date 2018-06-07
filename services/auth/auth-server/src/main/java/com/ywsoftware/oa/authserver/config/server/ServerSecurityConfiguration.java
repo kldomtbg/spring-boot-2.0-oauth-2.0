@@ -51,7 +51,8 @@ public class ServerSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .disable()
                 .formLogin()
-                .loginPage("/login/oauth2").permitAll();
+                //.loginPage("/login/oauth2")
+                .permitAll();
         // @formatter:on
     }
 }

@@ -1,11 +1,11 @@
 package com.ywsoftware.oa.authserver.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class OAuthLoginController {
-    @RequestMapping("/login/oauth2")
+    @GetMapping("/login/oauth2")
     public String LoginPage() {
         return "/login.html";
     }
