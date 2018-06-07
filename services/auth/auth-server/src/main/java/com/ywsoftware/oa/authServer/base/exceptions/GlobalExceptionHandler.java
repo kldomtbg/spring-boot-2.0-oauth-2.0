@@ -24,6 +24,7 @@ public class GlobalExceptionHandler {
 
         } else {
             //TODO 非应用异常
+            logger.error(ex.getMessage(), ex);
         }
         return ex.getMessage();
     }
