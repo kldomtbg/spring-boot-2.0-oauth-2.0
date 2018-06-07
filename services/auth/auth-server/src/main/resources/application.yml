@@ -25,3 +25,10 @@ spring:
       properties:
            hibernate:
                format_sql: true
+
+  http:
+     encoding:
+         force: true
+         charset: UTF-8
+         enabled: true
+

@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.server.authserver;
+package com.ywsoftware.oa.authserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

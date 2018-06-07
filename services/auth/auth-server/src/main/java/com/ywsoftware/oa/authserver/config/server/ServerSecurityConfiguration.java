@@ -43,11 +43,15 @@ public class ServerSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
         // @formatter:off
-        http.authorizeRequests()
+        http
+                .authorizeRequests()
                 .antMatchers("/oauth/tokens/revoke/**").permitAll()
                 .anyRequest().authenticated()
-                .and().formLogin().permitAll()
-                .and().csrf().disable();
+                .and()
+                .csrf()
+                .disable()
+                .formLogin()
+                .loginPage("/login/oauth2").permitAll();
         // @formatter:on
     }
 }
