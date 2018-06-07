@@ -7,9 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-/**
- * Created by Vladimir Vashchuk on 30.05.2018
- */
 @Repository
 public interface User2Service extends JpaRepository<User, Long> {
 

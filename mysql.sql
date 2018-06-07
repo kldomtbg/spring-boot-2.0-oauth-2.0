@@ -58,35 +58,6 @@ INSERT INTO `customers` VALUES (1, 'User1', 'email1@email1.com', '1111111111');
 INSERT INTO `customers` VALUES (3, 'User3', 'email3@email3.com', '3333333333');
 INSERT INTO `customers` VALUES (4, 'newCustomer4', 'mail@mail.com', '7777777777');
 
--- ----------------------------
--- Table structure for flyway_schema_history
--- ----------------------------
-DROP TABLE IF EXISTS `flyway_schema_history`;
-CREATE TABLE `flyway_schema_history`  (
-  `installed_rank` int(11) NOT NULL,
-  `version` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `description` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `type` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `script` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `checksum` int(11) NULL DEFAULT NULL,
-  `installed_by` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `installed_on` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `execution_time` int(11) NOT NULL,
-  `success` tinyint(1) NOT NULL,
-  PRIMARY KEY (`installed_rank`) USING BTREE,
-  INDEX `flyway_schema_history_s_idx`(`success`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of flyway_schema_history
--- ----------------------------
-INSERT INTO `flyway_schema_history` VALUES (1, '1', 'create customers', 'SQL', 'h2/V1__create_customers.sql', 1308786221, 'root', '2018-06-05 16:11:35', 46, 1);
-INSERT INTO `flyway_schema_history` VALUES (2, '2', 'create oauth2', 'SQL', 'h2/V2__create_oauth2.sql', -1328868808, 'root', '2018-06-05 16:11:36', 291, 1);
-INSERT INTO `flyway_schema_history` VALUES (3, '3', 'create user', 'SQL', 'h2/V3__create_user.sql', -1455808321, 'root', '2018-06-05 16:11:36', 202, 1);
-INSERT INTO `flyway_schema_history` VALUES (4, '4', 'insert customers', 'SQL', 'h2/V4__insert_customers.sql', 1313749259, 'root', '2018-06-05 16:11:36', 4, 1);
-INSERT INTO `flyway_schema_history` VALUES (5, '5', 'insert authentication', 'SQL', 'h2/V5__insert_authentication.sql', 319341151, 'root', '2018-06-05 16:11:36', 4, 1);
-INSERT INTO `flyway_schema_history` VALUES (6, '6', 'insert authorities', 'SQL', 'h2/V6__insert_authorities.sql', 1234464902, 'root', '2018-06-05 16:11:36', 3, 1);
-INSERT INTO `flyway_schema_history` VALUES (7, '7', 'insert user with authorities', 'SQL', 'h2/V7__insert_user_with_authorities.sql', -346233396, 'root', '2018-06-05 16:11:36', 10, 1);
 
 -- ----------------------------
 -- Table structure for oauth_access_token
