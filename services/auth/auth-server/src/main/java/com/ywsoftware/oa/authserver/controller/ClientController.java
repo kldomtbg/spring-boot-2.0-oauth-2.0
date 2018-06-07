@@ -12,24 +12,20 @@ import java.util.List;
 public class ClientController {
     private ClientService clientService;
 
-
     @GetMapping("/")
     public List<OAuthClientDetails> getAll() {
         return clientService.getAll();
     }
-
 
     @GetMapping("/{id}")
     public OAuthClientDetails findById(@PathVariable String id) {
         return clientService.findById(id);
     }
 
-
     @PostMapping("/saveOrUpdate")
     public OAuthClientDetails save(OAuthClientDetails oauthClientDetails) {
         return clientService.save(oauthClientDetails);
     }
-
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {

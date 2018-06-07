@@ -13,24 +13,20 @@ import java.util.List;
 public class UserController {
     private UserService userService;
 
-
     @GetMapping("/")
     public List<User> getAll() {
         return userService.getAll();
     }
-
 
     @GetMapping("/{id}")
     public User findById(@PathVariable String id) {
         return userService.findById(id);
     }
 
-
     @PostMapping("/saveOrUpdate")
     public User save(User user) {
         return userService.save(user);
     }
-
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {

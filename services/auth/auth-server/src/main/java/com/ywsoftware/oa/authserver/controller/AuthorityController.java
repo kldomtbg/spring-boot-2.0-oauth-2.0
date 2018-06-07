@@ -12,24 +12,20 @@ import java.util.List;
 public class AuthorityController {
     private AuthorityService authorityService;
 
-
     @GetMapping("/")
     public List<Authority> getAll() {
         return authorityService.getAll();
     }
-
 
     @GetMapping("/{id}")
     public Authority findById(@PathVariable String id) {
         return authorityService.findById(id);
     }
 
-
     @PostMapping("/saveOrUpdate")
     public Authority save(Authority Authority) {
         return authorityService.save(Authority);
     }
-
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {
