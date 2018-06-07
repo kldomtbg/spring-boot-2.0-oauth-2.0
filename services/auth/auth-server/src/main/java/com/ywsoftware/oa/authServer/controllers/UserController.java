@@ -25,12 +25,12 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public User read(String id) {
+    public User read(@PathVariable String id) {
         return userService.read(id);
     }
 
     @DeleteMapping
-    public void delete(String id) {
+    public void delete(@PathVariable String id) {
         userService.delete(id);
     }
 
