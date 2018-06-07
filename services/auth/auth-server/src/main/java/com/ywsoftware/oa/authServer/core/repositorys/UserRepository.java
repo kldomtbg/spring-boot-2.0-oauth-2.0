@@ -7,7 +7,7 @@ public interface UserRepository {
 
     User create(User user);
 
-    void update(String name, String id);
+    void update(User user);
 
     void delete(String id);
 }

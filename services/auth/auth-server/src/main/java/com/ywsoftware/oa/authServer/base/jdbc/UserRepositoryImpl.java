@@ -24,8 +24,8 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public void update(String name, String id) {
-        userRepositoryInterface.update(name, id);
+    public void update(User user) {
+        userRepositoryInterface.save(user);
     }
 
     @Override

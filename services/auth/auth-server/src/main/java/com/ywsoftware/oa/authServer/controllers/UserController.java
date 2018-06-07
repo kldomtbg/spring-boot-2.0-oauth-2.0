@@ -15,18 +15,18 @@ public class UserController {
     }
 
     @PostMapping
-    public void create(String id, String name, String password, String email) {
-        userService.create(id, name, password, email);
+    public void create(User user) {
+        userService.create(user);
     }
 
     @PutMapping
-    public void update(String name, String id) {
-        userService.update(name, id);
+    public void update(User user) {
+        userService.update(user);
     }
 
-    @GetMapping
-    public User read(String name) {
-        return userService.read(name);
+    @GetMapping("/{id}")
+    public User read(String id) {
+        return userService.read(id);
     }
 
     @DeleteMapping

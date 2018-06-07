@@ -18,15 +18,12 @@ public class UserService {
     /**
      * 增加用户
      *
-     * @param name
-     * @param id
-     * @param password
-     * @param email
+     * @param user
      * @return
      */
     @Transactional
-    public User create(String id, String name, String password, String email) {
-        return userRepository.create(new User(id, name, password, email));
+    public User create(User user) {
+        return userRepository.create(user);
     }
 
     /**
@@ -42,13 +39,12 @@ public class UserService {
     /**
      * 修改用户
      *
-     * @param name
-     * @param id
+     * @param user
      * @return
      */
     @Transactional
-    public void update(String name, String id) {
-        userRepository.update(name, id);
+    public void update(User user) {
+        userRepository.update(user);
     }
 
     /**
