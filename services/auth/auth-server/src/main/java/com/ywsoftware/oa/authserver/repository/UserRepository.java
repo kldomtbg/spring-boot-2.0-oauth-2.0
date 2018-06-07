@@ -15,8 +15,4 @@ public interface UserRepository extends JpaRepository<User, String> {
             "WHERE user.username = :username")
     User findByUsername(@Param("username") String username);
 
-   /* @Override
-    @Query("SELECT DISTINCT user FROM User user " +
-            "INNER JOIN FETCH user.authorities AS authorities ")
-    List<User> findAll();*/
 }

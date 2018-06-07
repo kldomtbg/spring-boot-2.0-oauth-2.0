@@ -33,12 +33,12 @@ public class CustomerSpecification implements Specification<Customer> {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
 
-        if (o == null || getClass() != o.getClass()) return false;
+        if (obj == null || getClass() != obj.getClass()) return false;
 
-        CustomerSpecification that = (CustomerSpecification) o;
+        CustomerSpecification that = (CustomerSpecification) obj;
 
         return new EqualsBuilder()
                 .append(criteria, that.criteria)

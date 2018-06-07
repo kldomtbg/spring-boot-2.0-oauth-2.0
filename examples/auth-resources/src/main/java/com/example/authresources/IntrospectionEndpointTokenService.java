@@ -10,7 +10,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.crypto.codec.Base64;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.common.exceptions.InvalidTokenException;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
@@ -27,6 +26,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.Base64;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -171,7 +171,7 @@ public class IntrospectionEndpointTokenService implements ResourceServerTokenSer
 
         String creds = String.format("%s:%s", clientId, clientSecret);
         try {
-            return "Basic " + new String(Base64.encode(creds.getBytes("UTF-8")));
+            return "Basic " + new String(Base64.getEncoder().encode(creds.getBytes("UTF-8")));
         } catch (UnsupportedEncodingException e) {
             throw new IllegalStateException("Could not convert String");
         }

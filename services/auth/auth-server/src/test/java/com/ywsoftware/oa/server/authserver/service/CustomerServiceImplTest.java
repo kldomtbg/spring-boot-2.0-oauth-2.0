@@ -10,13 +10,13 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,7 +26,7 @@ import static org.mockito.ArgumentMatchers.any;
 
 @RunWith(SpringRunner.class)
 public class CustomerServiceImplTest {
-    @Autowired
+    @Resource
     private CustomerService customerService;
     @MockBean
     private CustomerRepository customerRepository;
