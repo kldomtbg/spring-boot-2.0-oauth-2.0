@@ -5,10 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Transient;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.Pattern;
 
 @Entity
 public class User extends EntityImpl implements AggregateRoot {
+
     @Column(nullable = false)
+    @Pattern(regexp="^[a-zA-Z]\\S{3,12}$",message="输入合法的姓名")
     private String name;
 
     @Column(nullable = false)
