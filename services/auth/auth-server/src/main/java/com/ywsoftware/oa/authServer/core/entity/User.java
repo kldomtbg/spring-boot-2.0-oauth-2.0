@@ -12,7 +12,7 @@ public class User extends EntityImpl implements AggregateRoot {
     private String name;
 
     @Column(nullable = false)
-    private String passWord;
+    private String password;
 
     @Column(nullable = false)
     @Email
@@ -26,10 +26,10 @@ public class User extends EntityImpl implements AggregateRoot {
         super();
     }
 
-    public User(String _id, String _name, String _passWord, String _email) {
+    public User(String _id, String _name, String _password, String _email) {
         super(_id);
         this.name = _name;
-        this.passWord = _passWord;
+        this.password = _password;
         this.email = _email;
     }
 
@@ -41,12 +41,12 @@ public class User extends EntityImpl implements AggregateRoot {
         this.name = name;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getpassword() {
+        return password;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setpassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {

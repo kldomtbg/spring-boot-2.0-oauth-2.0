@@ -20,13 +20,13 @@ public class UserService {
      *
      * @param name
      * @param id
-     * @param passWord
+     * @param password
      * @param email
      * @return
      */
     @Transactional
-    public User create(String id, String name, String passWord, String email) {
-        return userRepository.create(new User(id, name, passWord, email));
+    public User create(String id, String name, String password, String email) {
+        return userRepository.create(new User(id, name, password, email));
     }
 
     /**

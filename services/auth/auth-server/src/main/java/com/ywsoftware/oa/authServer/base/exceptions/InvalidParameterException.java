@@ -12,4 +12,8 @@ public class InvalidParameterException extends ApplicationException{
     public InvalidParameterException(String msg) {
         super(msg);
     }
+
+    public InvalidParameterException(String msg, Exception ex) {
+        super(msg, ex);
+    }
 }

@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
     public String processException(Exception ex, HttpServletRequest request, HttpServletResponse response) {
         if (ex instanceof ApplicationException) {
             //TODO 应用异常
-            logger.error(ex.getMessage(), ex);
+            logger.warn(ex.getMessage(), ex);
 
         } else {
             //TODO 非应用异常
