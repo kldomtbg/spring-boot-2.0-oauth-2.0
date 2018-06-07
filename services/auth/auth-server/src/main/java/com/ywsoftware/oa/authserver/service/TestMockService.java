@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.server.authserver.service;
+package com.ywsoftware.oa.authserver.service;
 
 public class TestMockService {
 

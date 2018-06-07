@@ -1,10 +1,8 @@
-package com.ywsoftware.oa.server.authserver.controller;
+package com.ywsoftware.oa.authserver.controller;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.oauth2.provider.token.ConsumerTokenServices;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -17,8 +15,7 @@ public class OauthLogoutController {
     @Resource(name = "tokenServices")
     private ConsumerTokenServices tokenServices;
 
-    @RequestMapping(value = "/oauth/tokens/revoke", method = RequestMethod.DELETE)
-    @ResponseBody
+    @DeleteMapping(value = "/oauth/tokens/revoke")
     public void revokeToken(HttpServletRequest request) {
         String authorization = request.getHeader("Authorization");
         if (authorization != null && StringUtils.containsIgnoreCase(authorization, "Bearer")) {

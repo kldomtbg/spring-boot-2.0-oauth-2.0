@@ -1,6 +1,6 @@
-package com.ywsoftware.oa.server.authserver.repository;
+package com.ywsoftware.oa.authserver.repository;
 
-import com.ywsoftware.oa.server.authserver.model.security.User;
+import com.ywsoftware.oa.authserver.model.security.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

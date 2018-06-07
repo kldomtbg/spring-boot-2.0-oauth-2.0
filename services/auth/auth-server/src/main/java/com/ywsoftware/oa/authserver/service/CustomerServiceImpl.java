@@ -1,8 +1,8 @@
-package com.ywsoftware.oa.server.authserver.service;
+package com.ywsoftware.oa.authserver.service;
 
-import com.ywsoftware.oa.server.authserver.model.Customer;
-import com.ywsoftware.oa.server.authserver.repository.CustomerRepository;
-import com.ywsoftware.oa.server.authserver.repository.spec.CustomerSpecificationsBuilder;
+import com.ywsoftware.oa.authserver.model.Customer;
+import com.ywsoftware.oa.authserver.repository.CustomerRepository;
+import com.ywsoftware.oa.authserver.repository.spec.CustomerSpecificationsBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.access.prepost.PreAuthorize;

@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.server.authserver.config.encryption;
+package com.ywsoftware.oa.authserver.config.encryption;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

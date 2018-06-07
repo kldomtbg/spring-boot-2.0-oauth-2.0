@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.server.authserver.service;
+package com.ywsoftware.oa.authserver.service;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.server.authserver.model;
+package com.ywsoftware.oa.authserver.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

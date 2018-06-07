@@ -1,6 +1,6 @@
-package com.ywsoftware.oa.server.authserver.repository.spec;
+package com.ywsoftware.oa.authserver.repository.spec;
 
-import com.ywsoftware.oa.server.authserver.model.Customer;
+import com.ywsoftware.oa.authserver.model.Customer;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.springframework.data.jpa.domain.Specification;

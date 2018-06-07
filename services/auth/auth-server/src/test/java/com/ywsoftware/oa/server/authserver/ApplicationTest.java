@@ -1,8 +1,8 @@
-package com.ywsoftware.oa.server.authserver;
+package com.ywsoftware.oa.authserver;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ywsoftware.oa.server.authserver.repository.CustomerRepository;
-import com.ywsoftware.oa.server.authserver.util.CustomerTestUtil;
+import com.ywsoftware.oa.authserver.repository.CustomerRepository;
+import com.ywsoftware.oa.authserver.util.CustomerTestUtil;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

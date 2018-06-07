@@ -1,7 +1,7 @@
-package com.ywsoftware.oa.server.authserver.service;
+package com.ywsoftware.oa.authserver.service;
 
-import com.ywsoftware.oa.server.authserver.model.security.User;
-import com.ywsoftware.oa.server.authserver.repository.UserRepository;
+import com.ywsoftware.oa.authserver.model.security.User;
+import com.ywsoftware.oa.authserver.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

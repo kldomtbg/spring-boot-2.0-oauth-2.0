@@ -1,6 +1,6 @@
-package com.ywsoftware.oa.server.authserver.util;
+package com.ywsoftware.oa.authserver.util;
 
-import com.ywsoftware.oa.server.authserver.model.Customer;
+import com.ywsoftware.oa.authserver.model.Customer;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;

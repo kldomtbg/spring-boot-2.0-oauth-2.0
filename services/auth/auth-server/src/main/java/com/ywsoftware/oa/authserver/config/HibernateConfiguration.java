@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.server.authserver.config;
+package com.ywsoftware.oa.authserver.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

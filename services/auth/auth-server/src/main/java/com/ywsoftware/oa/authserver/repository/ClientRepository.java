@@ -1,7 +1,7 @@
-package com.ywsoftware.oa.server.authserver.repository;
+package com.ywsoftware.oa.authserver.repository;
 
 
-import com.ywsoftware.oa.server.authserver.model.OauthClientDetails;
+import com.ywsoftware.oa.authserver.model.OauthClientDetails;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

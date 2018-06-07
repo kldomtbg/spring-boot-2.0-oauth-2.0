@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.server.authserver.model.security;
+package com.ywsoftware.oa.authserver.model.security;
 
 import org.springframework.security.core.userdetails.UserDetails;
 

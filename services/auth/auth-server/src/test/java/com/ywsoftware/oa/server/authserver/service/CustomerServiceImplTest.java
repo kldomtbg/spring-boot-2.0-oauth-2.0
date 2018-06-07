@@ -1,9 +1,11 @@
 package com.ywsoftware.oa.server.authserver.service;
 
-import com.ywsoftware.oa.server.authserver.model.Customer;
-import com.ywsoftware.oa.server.authserver.repository.CustomerRepository;
-import com.ywsoftware.oa.server.authserver.repository.spec.CustomerSpecificationsBuilder;
-import com.ywsoftware.oa.server.authserver.util.CustomerTestUtil;
+import com.ywsoftware.oa.authserver.model.Customer;
+import com.ywsoftware.oa.authserver.repository.CustomerRepository;
+import com.ywsoftware.oa.authserver.repository.spec.CustomerSpecificationsBuilder;
+import com.ywsoftware.oa.authserver.service.CustomerService;
+import com.ywsoftware.oa.authserver.service.CustomerServiceImpl;
+import com.ywsoftware.oa.authserver.util.CustomerTestUtil;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

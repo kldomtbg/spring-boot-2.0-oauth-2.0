@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.server.authserver.repository.spec;
+package com.ywsoftware.oa.authserver.repository.spec;
 
 
 class SearchCriteria {

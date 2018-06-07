@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.server.authserver.controller;
+package com.ywsoftware.oa.authserver.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

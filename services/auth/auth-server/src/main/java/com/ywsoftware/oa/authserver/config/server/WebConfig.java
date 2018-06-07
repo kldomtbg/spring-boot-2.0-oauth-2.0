@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.server.authserver.config.server;
+package com.ywsoftware.oa.authserver.config.server;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.SessionAttributes;

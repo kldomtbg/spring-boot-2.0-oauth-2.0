@@ -1,7 +1,7 @@
-package com.ywsoftware.oa.server.authserver.controller;
+package com.ywsoftware.oa.authserver.controller;
 
-import com.ywsoftware.oa.server.authserver.model.security.Authority;
-import com.ywsoftware.oa.server.authserver.service.AuthorityService;
+import com.ywsoftware.oa.authserver.model.security.Authority;
+import com.ywsoftware.oa.authserver.service.AuthorityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
