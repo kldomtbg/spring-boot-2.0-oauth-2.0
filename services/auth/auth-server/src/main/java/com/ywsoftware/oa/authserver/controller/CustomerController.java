@@ -16,12 +16,12 @@ public class CustomerController {
     @Autowired
     private CustomerService service;
 
-    @RequestMapping(method = RequestMethod.GET)
+    @GetMapping
     public List<Customer> getAll(@RequestParam(value = "search", required = false) String search) {
         return service.findAll(search);
     }
 
-    @RequestMapping(value = "/{customerId}", method = RequestMethod.GET)
+    @GetMapping(value = "/{customerId}")
     public Customer getOne(@PathVariable Long customerId) {
         return service.findById(customerId);
     }

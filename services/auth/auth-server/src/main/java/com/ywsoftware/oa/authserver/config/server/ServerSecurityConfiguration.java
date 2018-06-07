@@ -21,7 +21,7 @@ import javax.annotation.Resource;
 @EnableWebSecurity
 @Order(SecurityProperties.BASIC_AUTH_ORDER)
 @Import(Encoders.class)
-public class ServerSecurityConfig extends WebSecurityConfigurerAdapter {
+public class ServerSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Resource
     private UserDetailsService userDetailsService;

@@ -8,7 +8,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "oauth_client_details")
 
-public class OauthClientDetails {
+public class OAuthClientDetails {
     @Id
     @Column(name = "clientId", unique = true, nullable = false, length = 20)
     private String clientId;

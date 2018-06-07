@@ -1,6 +1,6 @@
 package com.ywsoftware.oa.authserver.service;
 
-import com.ywsoftware.oa.authserver.model.OauthClientDetails;
+import com.ywsoftware.oa.authserver.model.OAuthClientDetails;
 import com.ywsoftware.oa.authserver.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,16 +13,16 @@ public class ClientService {
 
     private ClientRepository clientRepository;
 
-    public List<OauthClientDetails> getAll() {
+    public List<OAuthClientDetails> getAll() {
         return clientRepository.findAll();
     }
 
-    public OauthClientDetails findById(String id) {
-        Optional<OauthClientDetails> role = clientRepository.findById(id);
+    public OAuthClientDetails findById(String id) {
+        Optional<OAuthClientDetails> role = clientRepository.findById(id);
         return role.orElse(null);
     }
 
-    public OauthClientDetails save(OauthClientDetails oauthClientDetails) {
+    public OAuthClientDetails save(OAuthClientDetails oauthClientDetails) {
         return clientRepository.save(oauthClientDetails);
     }
 

@@ -7,7 +7,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 public class Encoders {
-
+    // the log rounds to use, between 4 and 31, default -1.
     @Bean
     public PasswordEncoder oauthClientPasswordEncoder() {
         return new BCryptPasswordEncoder(4);

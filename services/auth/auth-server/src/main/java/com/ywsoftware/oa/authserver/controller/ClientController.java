@@ -1,6 +1,6 @@
 package com.ywsoftware.oa.authserver.controller;
 
-import com.ywsoftware.oa.authserver.model.OauthClientDetails;
+import com.ywsoftware.oa.authserver.model.OAuthClientDetails;
 import com.ywsoftware.oa.authserver.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,19 +14,19 @@ public class ClientController {
 
 
     @GetMapping("/")
-    public List<OauthClientDetails> getAll() {
+    public List<OAuthClientDetails> getAll() {
         return clientService.getAll();
     }
 
 
     @GetMapping("/{id}")
-    public OauthClientDetails findById(@PathVariable String id) {
+    public OAuthClientDetails findById(@PathVariable String id) {
         return clientService.findById(id);
     }
 
 
     @PostMapping("/saveOrUpdate")
-    public OauthClientDetails save(OauthClientDetails oauthClientDetails) {
+    public OAuthClientDetails save(OAuthClientDetails oauthClientDetails) {
         return clientService.save(oauthClientDetails);
     }
 

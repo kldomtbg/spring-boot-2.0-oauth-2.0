@@ -8,36 +8,36 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Authority")
+@RequestMapping("/authority")
 public class AuthorityController {
-    private AuthorityService AuthorityService;
+    private AuthorityService authorityService;
 
 
     @GetMapping("/")
     public List<Authority> getAll() {
-        return AuthorityService.getAll();
+        return authorityService.getAll();
     }
 
 
     @GetMapping("/{id}")
     public Authority findById(@PathVariable String id) {
-        return AuthorityService.findById(id);
+        return authorityService.findById(id);
     }
 
 
     @PostMapping("/saveOrUpdate")
     public Authority save(Authority Authority) {
-        return AuthorityService.save(Authority);
+        return authorityService.save(Authority);
     }
 
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {
-        AuthorityService.delete(id);
+        authorityService.delete(id);
     }
 
     @Autowired
     public void setAuthorityService(AuthorityService AuthorityService) {
-        this.AuthorityService = AuthorityService;
+        this.authorityService = AuthorityService;
     }
 }

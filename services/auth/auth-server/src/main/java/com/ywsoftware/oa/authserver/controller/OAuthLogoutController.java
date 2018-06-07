@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 
 
 @RestController
-public class OauthLogoutController {
+public class OAuthLogoutController {
 
     @Resource(name = "tokenServices")
     private ConsumerTokenServices tokenServices;
