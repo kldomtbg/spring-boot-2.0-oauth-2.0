@@ -21,7 +21,6 @@ public class GlobalExceptionHandler {
         if (ex instanceof ApplicationException) {
             //TODO 应用异常
             logger.warn(ex.getMessage(), ex);
-
         } else {
             //TODO 非应用异常
             logger.error(ex.getMessage(), ex);
