@@ -26,27 +26,6 @@ public class UserServiceTest {
     UserService userService;
 
     @Test
-    public void saveUser() {
-        userService.create("a", "付玉", "1", "1");
-    }
-
-    @Test
-    public void deleteUser() {
-        anAssert.assertTrue("", true);
-    }
-
-    @Test
-    public void update() {
-        userService.update("测试", "3");
-    }
-
-    @Test
-    public void getUser() {
-        userService.read("付玉");
-
-    }
-
-    @Test
     public void test() {
         String id = "1";
         // 使用 mock 模拟 LogingService 对象,
