@@ -22,7 +22,7 @@ public class AuthorityController {
         return authorityService.findById(id);
     }
 
-    @PostMapping("/saveOrUpdate")
+    @PostMapping()
     public Authority save(Authority Authority) {
         return authorityService.save(Authority);
     }

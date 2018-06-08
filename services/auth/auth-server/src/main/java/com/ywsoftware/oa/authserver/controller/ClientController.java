@@ -22,7 +22,7 @@ public class ClientController {
         return clientService.findById(id);
     }
 
-    @PostMapping("/saveOrUpdate")
+    @PostMapping()
     public OAuthClientDetails save(OAuthClientDetails oauthClientDetails) {
         return clientService.save(oauthClientDetails);
     }
