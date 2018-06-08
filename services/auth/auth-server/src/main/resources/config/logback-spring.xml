@@ -36,13 +36,32 @@
         </encoder>
     </appender>
     <!-- 控制台输出日志级别 -->
-    <root level="info">
+    <root level="${log.level}">
         <appender-ref ref="STDOUT"/>
     </root>
     <!-- 指定项目中某个包，当有日志操作行为时的日志记录级别 -->
-    <!-- com.study.hibernate为根包，也就是只要是发生在这个根包下面的所有日志操作行为的权限都是DEBUG -->
+    <!-- com.study.hibernate为根包，也就是只要是发生在这个根包下面的所有日志操作行为的权限都是INFO -->
     <!-- 级别依次为【从高到低】：FATAL > ERROR > WARN > INFO > DEBUG > TRACE  -->
     <logger name="com.ywsoftware.oa.authServer" level="INFO">
         <appender-ref ref="syslog"/>
     </logger>
+
+    <!--开发环境-->
+    <springProfile name="dev">
+        <root level="DEBUG">
+            <appender-ref ref="STDOUT"/>
+        </root>
+    </springProfile>
+    <!--测试环境-->
+    <springProfile name="test">
+        <root level="INFO">
+            <appender-ref ref="STDOUT"/>
+        </root>
+    </springProfile>
+    <!--正式环境-->
+    <springProfile name="db">
+        <root level="INFO">
+            <appender-ref ref="STDOUT"/>
+        </root>
+    </springProfile>
 </configuration>
