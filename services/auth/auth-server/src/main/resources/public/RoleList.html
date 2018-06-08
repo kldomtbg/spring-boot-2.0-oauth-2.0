@@ -30,7 +30,7 @@
 </body>
 <script>
     $(function () {
-        $.ajax("/authority/", {
+        $.ajax("/api/authority/", {
             success: function (data) {
                 data.forEach(function (role) {
                     var tr = $("<tr>")

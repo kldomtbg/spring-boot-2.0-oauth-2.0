@@ -28,7 +28,7 @@
 </body>
 <script>
     $(function () {
-        $.ajax("/client/", {
+        $.ajax("/api/client/", {
             success: function (data) {
                 data.forEach(function (client) {
                     var tr = $("<tr>")

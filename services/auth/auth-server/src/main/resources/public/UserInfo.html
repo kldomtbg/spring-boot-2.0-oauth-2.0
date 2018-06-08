@@ -14,7 +14,7 @@
 <body>
 
 <div class="container">
-    <form class="form-horizontal" action="/user" method="post">
+    <form class="form-horizontal" action="/api/user" method="post">
         <div class="form-group">
             <label for="id" class="col-sm-2 control-label">id</label>
             <div class="col-sm-10">
@@ -64,7 +64,7 @@
     $(function () {
         if (getQueryString("id")) {
             $("#id").val(getQueryString("id")).attr("readonly", true);
-            $.ajax("/user/" + getQueryString("id"), {
+            $.ajax("/api/user/" + getQueryString("id"), {
                     success: function (data) {
                         $("#userName").val(data.userName);
                         $("#clientId").val(data.clientId);
