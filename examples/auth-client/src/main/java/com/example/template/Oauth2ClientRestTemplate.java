@@ -16,9 +16,6 @@ import java.util.Arrays;
 
 /**
  * Description : 生成的 token 和浏览器相关，如果浏览器以 authorization_code 方式访问成功是，如果 AuthorizationServer 设置该 client 同时也支持 password ，那么浏览器也 passwrod 方式方法，就会用同一个 token ，不会在进行验证，直接获得结果
- * User: h819
- * Date: 2015/12/4
- * Time: 11:19
  * To change this template use File | Settings | File Templates.
  */
 @Configuration
