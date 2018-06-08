@@ -2,7 +2,6 @@ package com.ywsoftware.oa.authserver.controller;
 
 import com.ywsoftware.oa.authserver.model.OAuthClientDetails;
 import com.ywsoftware.oa.authserver.service.ClientService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,7 +9,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/client")
 public class ClientController {
+
     private ClientService clientService;
+
+    public ClientController(ClientService clientService) {
+        this.clientService = clientService;
+    }
 
     @GetMapping("/")
     public List<OAuthClientDetails> getAll() {
@@ -30,10 +34,5 @@ public class ClientController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {
         clientService.delete(id);
-    }
-
-    @Autowired
-    public void setClientService(ClientService clientService) {
-        this.clientService = clientService;
     }
 }

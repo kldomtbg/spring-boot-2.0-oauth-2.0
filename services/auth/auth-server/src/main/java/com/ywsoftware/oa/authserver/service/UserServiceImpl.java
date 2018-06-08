@@ -16,8 +16,11 @@ import java.util.Optional;
 @Service
 public class UserServiceImpl implements UserDetailsService {
 
-    @Autowired
     private UserRepository userRepository;
+
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @Override
     @Transactional(readOnly = true)

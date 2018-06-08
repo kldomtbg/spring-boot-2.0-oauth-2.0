@@ -2,7 +2,6 @@ package com.ywsoftware.oa.authserver.controller;
 
 import com.ywsoftware.oa.authserver.model.Customer;
 import com.ywsoftware.oa.authserver.service.CustomerService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +12,10 @@ import java.util.List;
 @RequestMapping("/secured/customer")
 public class CustomerController {
 
-    @Autowired
+    public CustomerController(CustomerService service) {
+        this.service = service;
+    }
+
     private CustomerService service;
 
     @GetMapping

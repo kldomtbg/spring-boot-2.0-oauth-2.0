@@ -3,7 +3,6 @@ package com.ywsoftware.oa.authserver.controller;
 
 import com.ywsoftware.oa.authserver.model.security.User;
 import com.ywsoftware.oa.authserver.service.UserServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,7 +10,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 public class UserController {
+
     private UserServiceImpl userService;
+
+    public UserController(UserServiceImpl userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/")
     public List<User> getAll() {
@@ -33,8 +37,4 @@ public class UserController {
         userService.delete(id);
     }
 
-    @Autowired
-    public void setUserService(UserServiceImpl userService) {
-        this.userService = userService;
-    }
 }

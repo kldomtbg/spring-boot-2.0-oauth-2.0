@@ -1,6 +1,5 @@
 package com.ywsoftware.oa.authserver.config.server;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -19,7 +18,6 @@ import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 
-import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 @Configuration
@@ -32,6 +30,13 @@ public class AuthServerConfiguration extends AuthorizationServerConfigurerAdapte
     private AuthenticationManager authenticationManager;
     private UserDetailsService userDetailsService;
     private PasswordEncoder passwordEncoder;
+
+    public AuthServerConfiguration(DataSource dataSource, AuthenticationManager authenticationManager, UserDetailsService userDetailsService, PasswordEncoder passwordEncoder) {
+        this.dataSource = dataSource;
+        this.authenticationManager = authenticationManager;
+        this.userDetailsService = userDetailsService;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @Bean
     public TokenStore tokenStore() {
@@ -69,25 +74,5 @@ public class AuthServerConfiguration extends AuthorizationServerConfigurerAdapte
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
         endpoints.tokenStore(tokenStore()).authenticationManager(authenticationManager)
                 .userDetailsService(userDetailsService);
-    }
-
-    @Resource
-    public void setAuthenticationManager(AuthenticationManager authenticationManager) {
-        this.authenticationManager = authenticationManager;
-    }
-
-    @Resource
-    public void setDataSource(DataSource dataSource) {
-        this.dataSource = dataSource;
-    }
-
-    @Autowired
-    public void setOauthClientPasswordEncoder(PasswordEncoder oauthClientPasswordEncoder) {
-        this.passwordEncoder = oauthClientPasswordEncoder;
-    }
-
-    @Resource
-    public void setUserDetailsService(UserDetailsService userDetailsService) {
-        this.userDetailsService = userDetailsService;
     }
 }

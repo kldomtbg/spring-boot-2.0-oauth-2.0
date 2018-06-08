@@ -3,7 +3,6 @@ package com.ywsoftware.oa.authserver.service;
 
 import com.ywsoftware.oa.authserver.model.security.Authority;
 import com.ywsoftware.oa.authserver.repository.AuthorityRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +12,10 @@ import java.util.Optional;
 public class AuthorityService {
 
     private AuthorityRepository AuthorityRepository;
+
+    public AuthorityService(com.ywsoftware.oa.authserver.repository.AuthorityRepository authorityRepository) {
+        AuthorityRepository = authorityRepository;
+    }
 
     public List<Authority> getAll() {
         return AuthorityRepository.findAll();
@@ -28,10 +31,6 @@ public class AuthorityService {
         return AuthorityRepository.save(Authority);
     }
 
-    @Autowired
-    public void setAuthorityRepository(AuthorityRepository AuthorityRepository) {
-        this.AuthorityRepository = AuthorityRepository;
-    }
 
     public void delete(String id) {
         AuthorityRepository.deleteById(id);

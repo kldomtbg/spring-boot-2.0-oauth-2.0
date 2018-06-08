@@ -30,7 +30,6 @@ public class CustomerServiceImplTest {
     private CustomerService customerService;
     @MockBean
     private CustomerRepository customerRepository;
-
     @Before
     public void setUp() throws Exception {
         Customer testCustomer = CustomerTestUtil.buildCustomer(3L,
@@ -90,9 +89,10 @@ public class CustomerServiceImplTest {
 
     @TestConfiguration
     static class CustomerServiceTestContextConfig {
+        private CustomerServiceImpl customerService;
         @Bean
         public CustomerService customerService() {
-            return new CustomerServiceImpl();
+            return customerService;
         }
     }
 }

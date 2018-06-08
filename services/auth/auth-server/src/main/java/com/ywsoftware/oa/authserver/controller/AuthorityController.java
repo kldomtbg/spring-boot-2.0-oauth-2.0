@@ -2,7 +2,6 @@ package com.ywsoftware.oa.authserver.controller;
 
 import com.ywsoftware.oa.authserver.model.security.Authority;
 import com.ywsoftware.oa.authserver.service.AuthorityService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,6 +10,10 @@ import java.util.List;
 @RequestMapping("/authority")
 public class AuthorityController {
     private AuthorityService authorityService;
+
+    public AuthorityController(AuthorityService authorityService) {
+        this.authorityService = authorityService;
+    }
 
     @GetMapping("/")
     public List<Authority> getAll() {
@@ -30,10 +33,5 @@ public class AuthorityController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {
         authorityService.delete(id);
-    }
-
-    @Autowired
-    public void setAuthorityService(AuthorityService AuthorityService) {
-        this.authorityService = AuthorityService;
     }
 }

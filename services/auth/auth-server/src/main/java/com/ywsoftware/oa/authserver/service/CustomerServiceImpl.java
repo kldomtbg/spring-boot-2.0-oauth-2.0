@@ -3,7 +3,6 @@ package com.ywsoftware.oa.authserver.service;
 import com.ywsoftware.oa.authserver.model.Customer;
 import com.ywsoftware.oa.authserver.repository.CustomerRepository;
 import com.ywsoftware.oa.authserver.repository.spec.CustomerSpecificationsBuilder;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
@@ -16,8 +15,11 @@ import java.util.regex.Pattern;
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
-    @Autowired
     private CustomerRepository repository;
+
+    public CustomerServiceImpl(CustomerRepository repository) {
+        this.repository = repository;
+    }
 
     @Override
     @PreAuthorize("hasAuthority('CUSTOMER_READ')")

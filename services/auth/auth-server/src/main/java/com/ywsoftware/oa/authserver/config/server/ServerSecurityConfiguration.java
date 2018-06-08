@@ -1,7 +1,6 @@
 package com.ywsoftware.oa.authserver.config.server;
 
 import com.ywsoftware.oa.authserver.config.encryption.Encoders;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,7 +25,7 @@ public class ServerSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Resource
     private UserDetailsService userDetailsService;
 
-    @Autowired
+    @Resource
     private PasswordEncoder userPasswordEncoder;
 
     @Bean

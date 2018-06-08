@@ -2,7 +2,6 @@ package com.ywsoftware.oa.authserver.service;
 
 import com.ywsoftware.oa.authserver.model.OAuthClientDetails;
 import com.ywsoftware.oa.authserver.repository.ClientRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,6 +11,10 @@ import java.util.Optional;
 public class ClientService {
 
     private ClientRepository clientRepository;
+
+    public ClientService(ClientRepository clientRepository) {
+        this.clientRepository = clientRepository;
+    }
 
     public List<OAuthClientDetails> getAll() {
         return clientRepository.findAll();
@@ -28,10 +31,5 @@ public class ClientService {
 
     public void delete(String id) {
         clientRepository.deleteById(id);
-    }
-
-    @Autowired
-    public void setClientRepository(ClientRepository clientRepository) {
-        this.clientRepository = clientRepository;
     }
 }
