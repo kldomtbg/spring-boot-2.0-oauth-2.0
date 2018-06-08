@@ -1,20 +1,20 @@
-#Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# spring-boot-2.0-oauth-2.0
 
-#Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## 软件平台
+spring boot 2.0.2
+mysql 8.0
 
-#Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## 项目构成
 
-#Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+### auth-server
+oauth2.0认证服务器 支持authorization_code模式
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+### auth-client 
+登入客户端 会跳转到auth-server的登入页面
+
+### auth-resources
+资源服务器 提供一个了个简单的api 供auth-client调用
+
+
+## 说明
+大部分的代码源自github，我做了一次整合。因为我实在找不到完整一点的基于spring boot2.0的oauth例子。
