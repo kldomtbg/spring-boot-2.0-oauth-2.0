@@ -1,7 +1,7 @@
 package com.ywsoftware.oa.authServer.core.services;
 
 import com.ywsoftware.oa.authServer.core.entity.User;
-import com.ywsoftware.oa.authServer.core.repositorys.UserRepository;
+import com.ywsoftware.oa.authServer.core.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

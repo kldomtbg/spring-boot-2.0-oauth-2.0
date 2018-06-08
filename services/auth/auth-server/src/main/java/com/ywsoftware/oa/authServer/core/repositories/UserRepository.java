@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.authServer.core.repositorys;
+package com.ywsoftware.oa.authServer.core.repositories;
 
 import com.ywsoftware.oa.authServer.core.entity.User;
 
