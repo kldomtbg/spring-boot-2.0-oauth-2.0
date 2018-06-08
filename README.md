@@ -9,10 +9,10 @@ mysql 8.0
 ### auth-server
 oauth2.0认证服务器 支持authorization_code模式
 
-### auth-client 
+### examples/auth-client 
 登入客户端 会跳转到auth-server的登入页面
 
-### auth-resources
+### examples/auth-resources
 资源服务器 提供一个了个简单的api 供auth-client调用
 
 
