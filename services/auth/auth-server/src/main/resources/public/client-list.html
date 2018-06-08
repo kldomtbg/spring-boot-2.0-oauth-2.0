@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container">
-    <a href="ClientInfo.html" class="btn btn-info">添加</a>
+    <a href="client-info.html" class="btn btn-info">添加</a>
 </div>
 <div class="container">
     <div class="panel panel-default">
@@ -34,7 +34,7 @@
                     var tr = $("<tr>")
                     tr.append($("<td>" + client.clientId + "</td>"))
                         .append($("<td>" + client.scope + "</td>"))
-                        .append($("<td><a href='ClientInfo.html?id=" + client.clientId + "'>修改</a></td>"))
+                        .append($("<td><a href='client-info.html?id=" + client.clientId + "'>修改</a></td>"))
                     $(".table").append(tr);
                 })
             }

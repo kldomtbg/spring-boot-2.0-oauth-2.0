@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container">
-    <a href="UserInfo.html" class="btn btn-info">添加</a>
+    <a href="user-info.html" class="btn btn-info">添加</a>
 </div>
 <div class="container">
     <div class="panel panel-default">
@@ -39,7 +39,7 @@
                         .append($("<td>" + user.clientId + "</td>"))
                         .append($("<td>" + (user.authorities ? user.authorities.map(x => x.name).toString() : "") + "</td>"))
                         .append($("<td>" + user.enabled + "</td>"))
-                        .append($("<td><a href='UserInfo.html?id=" + user.id + "'>修改</a></td>"));
+                        .append($("<td><a href='user-info.html?id=" + user.id + "'>修改</a></td>"));
                     $(".table").append(tr);
                 })
             }

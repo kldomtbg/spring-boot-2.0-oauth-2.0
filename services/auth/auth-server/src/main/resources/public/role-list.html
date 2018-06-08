@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container">
-    <a href="RoleInfo.html" class="btn btn-info">添加</a>
+    <a href="role-info.html" class="btn btn-info">添加</a>
 </div>
 <div class="container">
     <div class="panel panel-default">
@@ -38,7 +38,7 @@
                         .append($("<td>" + role.name + "</td>"))
                         .append($("<td>" + role.descricao + "</td>"))
                         .append($("<td>" + role.api + "</td>"))
-                        .append($("<td><a href='RoleInfo.html?id=" + role.id + "'>修改</a></td>"))
+                        .append($("<td><a href='role-info.html?id=" + role.id + "'>修改</a></td>"))
                     $(".table").append(tr);
                 })
             }
