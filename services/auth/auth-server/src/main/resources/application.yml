@@ -1,34 +1,9 @@
-server:
-  port: 8080
-  servlet:
-      session:
-        cookie:
-          name: weqdsdscc
-
 spring:
-  profiles:
-    active: dev
   application:
     name: auth-server
-  datasource:
-    url: jdbc:mysql://localhost:3306/mytest1?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-  jpa:
-      database-platform: org.hibernate.dialect.MySQLDialect
-      hibernate:
-        ddl-auto: update
-      show-sql: true
-      database: mysql
-      properties:
-           hibernate:
-               format_sql: true
-
-  http:
-     encoding:
-         force: true
-         charset: UTF-8
-         enabled: true
-
+  profiles:
+    active: dev, db
+  cloud:
+    config:
+      label: dev
+      uri: ${CONFIG_SERVER_URL:http://localhost:8888}
