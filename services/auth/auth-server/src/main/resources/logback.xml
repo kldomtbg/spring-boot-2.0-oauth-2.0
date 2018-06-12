@@ -35,12 +35,6 @@
             <charset>UTF-8</charset> <!-- 此处设置字符集 -->
         </encoder>
     </appender>
-    <!-- 指定项目中某个包，当有日志操作行为时的日志记录级别 -->
-    <!-- com.study.hibernate为根包，也就是只要是发生在这个根包下面的所有日志操作行为的权限都是INFO -->
-    <!-- 级别依次为【从高到低】：FATAL > ERROR > WARN > INFO > DEBUG > TRACE  -->
-    <logger name="com.ywsoftware.oa.authserver" level="INFO">
-        <appender-ref ref="oalog"/>
-    </logger>
 
     <!--开发环境-->
     <springProfile name="dev">
@@ -59,5 +53,11 @@
         <root level="INFO">
             <appender-ref ref="STDOUT"/>
         </root>
+        <!-- 指定项目中某个包，当有日志操作行为时的日志记录级别 -->
+        <!-- com.study.hibernate为根包，也就是只要是发生在这个根包下面的所有日志操作行为的权限都是INFO -->
+        <!-- 级别依次为【从高到低】：FATAL > ERROR > WARN > INFO > DEBUG > TRACE  -->
+        <logger name="com.ywsoftware.oa.authserver" level="INFO">
+            <appender-ref ref="oalog"/>
+        </logger>
     </springProfile>
 </configuration>
