@@ -7,6 +7,6 @@ server:
 # Domino OAuth2 Authorization Server
 oauth2:
    resource:
-      checkToken.url: http://localhost:8080/oauth/check_token
+      checkToken.url: http://localhost:8000/oauth/check_token
       clientId: spring-security-oauth2-read-client
       secret: spring-security-oauth2-read-client-password1234

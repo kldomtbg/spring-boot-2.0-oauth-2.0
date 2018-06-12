@@ -1,24 +1,30 @@
 security:
   oauth2:
     client:
-        clientId: spring-security-oauth2-read-client  #client
-        clientSecret: spring-security-oauth2-read-client-password1234  #security
-        accessTokenUri: http://localhost:8080/oauth/token #http://localhost:8000/oauth/token
-        userAuthorizationUri: http://localhost:8080/oauth/authorize # http://localhost:8000//oauth/authorize
-        clientAuthenticationScheme: form
-        authenticationScheme: query
+      client-id: acme
+      client-secret: acmesecret
+      scope: read,write
+      auto-approve-scopes: '.*'
+
+github:
+    client:
+      clientId: spring-security-oauth2-read-client  #client
+      clientSecret: spring-security-oauth2-read-client-password1234  #security
+      accessTokenUri: http://localhost:8000/oauth/token #http://localhost:8000/oauth/token
+      userAuthorizationUri: http://localhost:8000/oauth/authorize # http://localhost:8000//oauth/authorize
+      clientAuthenticationScheme: form
+      authenticationScheme: query
+
     resource:
-          userInfoUri: http://localhost:8080/secured/user #http://localhost:8000/rest/hello/principal
+      userInfoUri: http://localhost:8000/secured/user #http://localhost:8000/rest/hello/principal
 
 logging:
   level:
     org.springframework.security: DEBUG
 server:
-  port: 8600
+  port: 8889
   servlet:
     session:
       cookie:
         name: OAUTH2SESSION
-
-
 resource_server_uri: http://localhost:9999/
