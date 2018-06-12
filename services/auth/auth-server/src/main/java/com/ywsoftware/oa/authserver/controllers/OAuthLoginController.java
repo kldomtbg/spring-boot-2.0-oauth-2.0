@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.authserver.controller;
+package com.ywsoftware.oa.authserver.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

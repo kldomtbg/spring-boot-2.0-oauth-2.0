@@ -77,7 +77,7 @@ public class SocialApplication extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    @ConfigurationProperties("github")
+    @ConfigurationProperties("security.oauth2.client")
     public ClientResources github() {
         return new ClientResources();
     }

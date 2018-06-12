@@ -19,16 +19,16 @@ class SpringOauth2ClientController {
     @Autowired
     OAuth2RestTemplate oAuth2RestTemplate;
     // 配置，配置单配置文件中比较合适下面的
-    @Value("${github.client.clientId}")
+    @Value("${security.oauth2.client.clientId}")
     private String client_id;
-    @Value("${github.client.clientSecret}")
+    @Value("${security.oauth2.client.clientSecret}")
     private String client_secret;
     private String[] scopes = new String[]{"read"};
     @Value("${resource_server_uri}")
     private String resource_server_url;
-    @Value("${github.client.accessTokenUri}")
+    @Value("${security.oauth2.client.accessTokenUri}")
     private String access_token_uri;
-    @Value("${github.client.userAuthorizationUri}")
+    @Value("${security.oauth2.client.userAuthorizationUri}")
     private String user_authorization_uri;
     @Autowired
     private Oauth2ClientRestTemplate restTemplate;

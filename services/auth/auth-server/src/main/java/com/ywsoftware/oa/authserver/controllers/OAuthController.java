@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.authserver.controller;
+package com.ywsoftware.oa.authserver.controllers;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.oauth2.provider.token.ConsumerTokenServices;

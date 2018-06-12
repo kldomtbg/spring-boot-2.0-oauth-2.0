@@ -1,4 +1,4 @@
-package com.ywsoftware.oa.authserver.controller;
+package com.ywsoftware.oa.authserver.controllers;
 
 import com.ywsoftware.oa.authserver.model.Customer;
 import com.ywsoftware.oa.authserver.service.CustomerService;
